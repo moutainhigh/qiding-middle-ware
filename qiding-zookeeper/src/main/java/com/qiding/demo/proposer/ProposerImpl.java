@@ -35,6 +35,6 @@ public class ProposerImpl implements Proposer,Acceptor {
 
     private List<Acceptor> chooseAcceptor(){
         //
-        return;
+        return null;
     }
 }

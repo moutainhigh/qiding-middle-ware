@@ -18,6 +18,7 @@
     <module>qiding-kafka</module>
     <module>qiding-cassandra</module>
     <module>qiding-cannel</module>
+    <module>qiding-mongodb</module>
   </modules>
 
   <name>qiding-middle-ware</name>
