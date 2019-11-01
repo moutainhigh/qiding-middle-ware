@@ -1,4 +1,4 @@
-package com.qiding.demo.param;
+package com.qiding.demo.roles.param;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

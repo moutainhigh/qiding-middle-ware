@@ -1,10 +1,10 @@
-package com.qiding.demo.proposer;
+package com.qiding.demo.roles.proposer;
 
 
-import com.qiding.demo.Acceptor;
-import com.qiding.demo.Proposer;
-import com.qiding.demo.param.ProposeRequest;
-import com.qiding.demo.param.ProposeResponse;
+import com.qiding.demo.roles.Acceptor;
+import com.qiding.demo.roles.Proposer;
+import com.qiding.demo.roles.param.ProposeRequest;
+import com.qiding.demo.roles.param.ProposeResponse;
 
 import java.util.List;
 
@@ -35,6 +35,6 @@ public class ProposerImpl implements Proposer,Acceptor {
 
     private List<Acceptor> chooseAcceptor(){
         //
-        return;
+        return null;
     }
 }

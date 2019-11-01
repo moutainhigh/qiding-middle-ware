@@ -1,8 +1,8 @@
-package com.qiding.demo.acceptor;
+package com.qiding.demo.roles.acceptor;
 
-import com.qiding.demo.Acceptor;
-import com.qiding.demo.param.ProposeRequest;
-import com.qiding.demo.param.ProposeResponse;
+import com.qiding.demo.roles.Acceptor;
+import com.qiding.demo.roles.param.ProposeRequest;
+import com.qiding.demo.roles.param.ProposeResponse;
 import lombok.Data;
 
 @Data

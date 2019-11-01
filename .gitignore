@@ -32,3 +32,5 @@ target/
 .project
 */disconf/download/
 disconf/download/
+
+*.pdf
