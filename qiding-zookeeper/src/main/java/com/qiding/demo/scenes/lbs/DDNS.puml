@@ -1,0 +1,34 @@
+@startuml
+
+   class AbstractZkClient{
+      # zkClient:CuratorFramework
+      # AbstractZkClient(String pathName)
+      + startZK():void
+   }
+
+   interface Register{
+      + register(String domainName,String ipAddress): Boolean
+   }
+
+   class RegisterImpl{
+      + register(String domainName,String ipAddress): Boolean
+   }
+
+
+
+   interface Dispatcher{
+      + dispatcher(String domainName):String
+   }
+
+   class DispatcherImpl{
+           + dispatcher(String domainName):String
+   }
+
+
+
+
+
+
+
+
+@enduml
