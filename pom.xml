@@ -19,6 +19,7 @@
     <module>qiding-cassandra</module>
     <module>qiding-cannel</module>
     <module>qiding-mongodb</module>
+    <module>qiding-jmx</module>
   </modules>
 
   <name>qiding-middle-ware</name>
