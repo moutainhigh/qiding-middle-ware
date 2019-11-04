@@ -7,3 +7,19 @@ curator主动监听节点
    子节点监听
 NodeCache ->NodeCacheListener
 PathChildrenCache->
+
+
+3。master选举
+   LeaderSelector leaderSelector 实现master选举，如果释放master、重新选举
+4。分布式锁
+    InterProcessMutex require,lock
+5.分布式计数
+   DistributedAtomicInteger 模拟分布式原子操作
+6.分布式Barrier
+   DistributedBarrier 有一个执行remove则，全部执行
+   DistributedDoubleBarrier 按照数量自动等待
+7。zkpath，eusure-path 方便创建、使用
+
+8。使用模拟器
+    curator-test 模拟本地的zookeeper
+    curator-cluster 本地模拟集群环境
