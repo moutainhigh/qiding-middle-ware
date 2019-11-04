@@ -19,19 +19,19 @@ public class RegisterImpl  extends AbstractZkClient implements Register {
     @Override
     public void register(String domainName, String ipAddress) throws Exception {
         //基于锁实现
-        registerWithLock(domainName,ipAddress);
+        //registerWithLock(domainName,ipAddress);
         //cas实现
-        registerWithCAS(domainName,ipAddress);
+         registerWithCAS(domainName,ipAddress);
     }
 
     public void registerWithLock(String domainName, String ipAddress) throws Exception {
         //使用锁实现
-        InterProcessMutex interProcessMutex=new InterProcessMutex(zkClient,domainName);
+        InterProcessMutex interProcessMutex=new InterProcessMutex(zkClient,domainName+"lock");
         interProcessMutex.acquire();
         Stat stat= zkClient.checkExists().forPath(domainName);
 
         if(stat==null){
-            zkClient.create().withMode(CreateMode.PERSISTENT).forPath(domainName,ipAddress.getBytes());
+            zkClient.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath(domainName,ipAddress.getBytes());
         }else{
             String oldData= new String(zkClient.getData().forPath(domainName));
             zkClient.setData().forPath(domainName,((oldData+","+ipAddress).getBytes()));
@@ -45,14 +45,19 @@ public class RegisterImpl  extends AbstractZkClient implements Register {
         while (true){
             StringBuilder sb=new StringBuilder();
             byte[]oldValue= atomicValue.get().postValue();
+            sb.append(ipAddress);
+
             if(oldValue!=null){
-                sb.append(new String(oldValue)).append(",").append(ipAddress);
-            }else{
-                sb.append(ipAddress);
+                sb.append(",").append(new String(oldValue));
+                AtomicValue<byte[]> result= atomicValue.compareAndSet(oldValue,sb.toString().getBytes());
+                if(result.succeeded()){
+                    return;
+                }
+                continue;
             }
-            AtomicValue<byte[]> result= atomicValue.compareAndSet(oldValue,sb.toString().getBytes());
-            if(result.succeeded()) {
-               break;
+
+            if(atomicValue.initialize(sb.toString().getBytes())){
+                return;
             }
         }
     }

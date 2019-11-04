@@ -10,7 +10,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class DispatcherImpl extends AbstractZkClient implements Dispatcher {
 
-
     Map<String,NodeCache> nodeCacheMap=new ConcurrentHashMap<>();
 
     public DispatcherImpl(String zkServer, String appName) {
@@ -19,9 +18,19 @@ public class DispatcherImpl extends AbstractZkClient implements Dispatcher {
     }
 
     @Override
-    public String dispatcher(String appName, String domain) {
-        if(nodeCacheMap.containsKey(appName+ File.separator+domain)){
-
-        }
+    public String dispatcher(String appName, final String domain) {
+        String appKey=appName+domain;
+        NodeCache nodeCache= nodeCacheMap.computeIfAbsent(appKey,value-> {
+            try {
+                NodeCache temp= new NodeCache(zkClient,domain);
+                temp.start(true);
+                return temp;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        });
+        byte[]ipBytes=nodeCache.getCurrentData().getData();
+        return new String(ipBytes);
     }
 }
