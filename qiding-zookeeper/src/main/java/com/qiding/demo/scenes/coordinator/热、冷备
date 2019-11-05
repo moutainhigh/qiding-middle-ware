@@ -1,0 +1,4 @@
+1。热备
+    序列号最小的执行备份  一个running 一个standby
+2。冷备
+    只有一个running
