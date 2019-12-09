@@ -20,6 +20,10 @@
     <module>qiding-cannel</module>
     <module>qiding-mongodb</module>
     <module>qiding-jmx</module>
+    <module>qiding-dubbo/qiding-dubbo-consumer</module>
+    <module>qiding-dubbo/qiding-dubbo-provider</module>
+	  <module>qiding-netty</module>
+	  <module>qiding-kubernetes</module>
   </modules>
 
   <name>qiding-middle-ware</name>

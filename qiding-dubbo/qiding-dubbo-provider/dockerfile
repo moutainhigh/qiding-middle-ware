@@ -1,0 +1,23 @@
+#基础镜像
+FROM qiding/qiding-dubbo-provider:v1.1
+#作者
+MAINTAINER  qiding qiding@syswin.com
+#创建目录
+#RUN mkdir /home/webapp
+#更新工作目录
+WORKDIR /home/webapp
+#copy文件到工作目录
+COPY ./target/qiding-dubbo-provider-0.0.1-SNAPSHOT.jar ./app.jar
+#执行命令
+RUN pwd
+RUN echo $PATH
+RUN ls
+#设置环境变量
+ENV PARAM=
+#开放端口
+EXPOSE 8081
+#运行jar包
+# 使用环境变量    java $PARAM  -jar  app.jar, 启动命令   docker run  -e PARAM="-Dserver.port=8088"  -d 434b3da44202
+# 使用 java  -jar  app.jar $PARAM  启动命令  docker run  -e PARAM="--server.port=8088"  -d 434b3da44202
+# 使用 $@
+ENTRYPOINT java $PARAM -jar  app.jar $0 $@

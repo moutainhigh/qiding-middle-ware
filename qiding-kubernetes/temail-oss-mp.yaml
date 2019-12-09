@@ -1,0 +1,111 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: temail-oss-mp
+  namespace: office-miyou
+spec:
+  selector:
+    matchLabels:
+      app: temail-oss-mp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: temail-oss-mp
+      annotations:
+        prometheus.io/port: '9102'
+        prometheus.io/scrape: 'true'
+    spec:
+      volumes:
+        - name: filebeat-volume
+          configMap:
+            name: filebeat-config
+            items:
+            - key: filebeat.yml
+              path: filebeat.yml
+        - name: project-log
+          emptyDir: {}
+      containers:
+      - name: filebeat
+        image: docker.systoon.com/k8s/filebeat:6.3.2
+        volumeMounts:
+        - name: filebeat-volume
+          mountPath: /usr/share/filebeat/filebeat.yml
+          subPath: filebeat.yml
+        - name: project-log
+          mountPath: /opt/logs
+        env:
+        - name: TZ
+          value: Asia/Shanghai
+        securityContext:
+          runAsUser: 0
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+      - name: app
+        image: reg1.syswin.com/temail/jar/temail-oss-mp:1.109
+        args: ["-Dloader.path=./libs", "-Dapollo.bootstrap.enabled=true -Denv=pro -server -Xms3072m -Xmx3072m -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -verbose:gc -XX:NewRatio=2 -XX:SurvivorRatio=4 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark -Xloggc:/opt/logs/gc.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=50m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/opt/logs"]
+        ports:
+        - containerPort: 8081
+        - containerPort: 8082
+        env:
+          - name: LANG
+            value: en_US.utf-8
+          - name: TZ
+            value: Asia/Shanghai
+        volumeMounts:
+        - name: project-log
+          mountPath: /opt/logs
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: temail-oss-mp
+  namespace: office-miyou
+spec:
+  selector:
+    app: temail-oss-mp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8081
+    - name: http8082
+      protocol: TCP
+      port: 8082
+      targetPort: 8082
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: temail-oss-mp
+  namespace: office-miyou
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: temail-oss-mp.innermail.com
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: temail-oss-mp
+          servicePort: 80
+  - host: temail-oss-mp.innermail.com
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: temail-oss-mp
+          servicePort: 8082
+  - host: mstmail.systoon.com
+    http:
+      paths:
+      - path: /otm/public
+        backend:
+          serviceName: temail-oss-mp
+          servicePort: 80
+   

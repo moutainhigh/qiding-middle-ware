@@ -1,0 +1,20 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: qiding-dubbo-provider
+  namespace: qiding-dubbo
+sepc:
+  replicas: 2
+  template:
+    metadata:
+        labels:
+           app: qiding-dubbo-provider
+    sec:
+      containers:
+        - name: qiding-dubbo-provider
+          image:  docker.io/qiding/qiding-dubbo-provider:v1.2
+          ports:
+            - containerPort: 8080
+        - name: filebeat
+          image: docker.systoon.com/k8s/filebeat:6.3.2

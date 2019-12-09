@@ -1,0 +1,6 @@
+apiversion: apps/v1 #使用哪个版本的 k8s
+kind: Deployment #创建什么样的对象
+metadata: #资源的唯一标示符
+  name: qiding
+spec: #不同的对象的描述不一样
+      #https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#XXXXXXXspec-v1-apps
