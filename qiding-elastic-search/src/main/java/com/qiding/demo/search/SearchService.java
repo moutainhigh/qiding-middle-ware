@@ -10,10 +10,12 @@ import org.elasticsearch.common.bytes.BytesArray;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.persistent.StartPersistentTaskAction;
 import org.elasticsearch.script.ScriptService;
 import org.elasticsearch.script.ScriptType;
 import org.elasticsearch.script.mustache.SearchTemplateRequestBuilder;
 
+import javax.naming.event.ObjectChangeListener;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -88,7 +90,26 @@ public class SearchService {
 //			.getResponse();
 
 
-		Map<String,String>
+		Map<String,String> kv=new HashMap<>();
+		kv.put("{{my_field}}","{{my_value}}");
+
+		Map<String, Object> query=new HashMap<>();
+		query.put("match",kv);
+
+
+		Map<String,Object> options=new HashMap<>();
+		options.put("query",query);
+
+		Map<String,Object> options=new HashMap<>();
+		options.put("query",query);
+
+
+
+
+
+
+
+
 
 
 
