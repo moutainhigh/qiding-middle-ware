@@ -20,7 +20,10 @@ public class TransportClientFactory {
 	}
 
 	public TransportClient client(String clusterName) throws UnknownHostException {
-		Settings settings = Settings.builder().put("cluster.name", "qiding-cluster").build();
+		Settings settings = Settings.builder()
+			.put("cluster.name", "qiding-cluster")
+			.put("client.transport.sniff",true)
+			.build();
 		TransportClient client = new PreBuiltTransportClient(settings)
 			.addTransportAddress(new TransportAddress(InetAddress.getByName("master"), 9300))
 			.addTransportAddress(new TransportAddress(InetAddress.getByName("node2"), 9300))

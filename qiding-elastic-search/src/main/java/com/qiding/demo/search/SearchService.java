@@ -75,10 +75,10 @@ public class SearchService {
 	}
 
 	public void useTemplate() throws IOException {
-		Map<String,Object> params= new HashMap<>();
-		params.put("my_field","username");
-		params.put("my_value","qiding");
-		params.put("my_size","10");
+//		Map<String,Object> params= new HashMap<>();
+//		params.put("my_field","username");
+//		params.put("my_value","qiding");
+//		params.put("my_size","10");
 
 //TODO 未知错误
 //		SearchResponse response=new SearchTemplateRequestBuilder(client)
@@ -90,57 +90,58 @@ public class SearchService {
 //			.getResponse();
 
 
-		Map<String,String> kv=new HashMap<>();
-		kv.put("{{my_field}}","{{my_value}}");
-
-		Map<String, Object> query=new HashMap<>();
-		query.put("match",kv);
-
-
-		Map<String,Object> options=new HashMap<>();
-		options.put("query",query);
-
-		Map<String,Object> options=new HashMap<>();
-		options.put("query",query);
-
-
-
-
-
-
-
-
-
-
-
-		XContentBuilder.builder(XContentType.JSON.xContent())
-			.startObject()
-			.field("")
-
-
-
-		client.admin().cluster().preparePutStoredScript()
-			.setId("qiding_search")
-			.setContent()
-			.setContent(new BytesArray(
-				"{\n" +
-					"    \"query\" : {\n" +
-					"        \"match\" : {\n" +
-					               "\"query\": { \"match\" : { \"{{my_field}}\" : \"{{my_value}}\" } },\n" +
-					               "\"size\" : \"{{my_size}}\""+
-					"        }\n" +
-					"    }\n" +
-					"}"), XContentType.JSON).get();
-
-		SearchResponse response=new SearchTemplateRequestBuilder(client)
-			.setScript("qiding_search")
-			.setScriptType(ScriptType.STORED)
-			.setScriptParams(params)
-			.setRequest(new SearchRequest())
-			.get().getResponse();
-
-		log.info(response);
+//		Map<String,String> kv=new HashMap<>();
+//		kv.put("{{my_field}}","{{my_value}}");
+//
+//		Map<String, Object> query=new HashMap<>();
+//		query.put("match",kv);
+//
+//
+//		Map<String,Object> options=new HashMap<>();
+//		options.put("query",query);
+//
+//		Map<String,Object> option2=new HashMap<>();
+//		options.put("query",query);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//		XContentBuilder.builder(XContentType.JSON.xContent())
+//			.startObject()
+//			.field("")
+//
+//
+//
+//		client.admin().cluster().preparePutStoredScript()
+//			.setId("qiding_search")
+//			//.setContent()
+//			.setContent(new BytesArray(
+//				"{\n" +
+//					"    \"query\" : {\n" +
+//					"        \"match\" : {\n" +
+//					               "\"query\": { \"match\" : { \"{{my_field}}\" : \"{{my_value}}\" } },\n" +
+//					               "\"size\" : \"{{my_size}}\""+
+//					"        }\n" +
+//					"    }\n" +
+//					"}"), XContentType.JSON).get();
+//
+//		SearchResponse response=new SearchTemplateRequestBuilder(client)
+//			.setScript("qiding_search")
+//			.setScriptType(ScriptType.STORED)
+//			.setScriptParams(params)
+//			.setRequest(new SearchRequest())
+//			.get().getResponse();
+//
+//		log.info(response);
 	}
+
 
 
 }

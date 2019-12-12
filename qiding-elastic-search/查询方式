@@ -1,0 +1,328 @@
+1。query by  search
+   GET /index/_search?q=key:value
+-----------------------------------------------------------
+2。query by DSL 的使用
+   查询所有
+   GET  /index/_search
+   {
+     query:{
+       match_all:{}
+     }
+   }
+
+   按照条件查询，排序
+    GET  /index/_search
+      {
+        query:{
+          match:{
+             name:"xxx"
+          }
+        }
+        sort:{
+           price:desc
+        }
+      }
+
+   查询分页
+   GET /index/_search
+   {
+    query:{
+           match_all:{}
+         }
+    from:0
+    size:1
+   }
+
+   查询某个字段
+   GET /index/_search
+   {
+     query:{
+        match_all:{}
+     },
+     _source:["name"]
+   }
+-----------------------------------------------------------
+3。query filter （bool包括多个查询条件）
+   bool:{
+      must:{
+         match:{
+         }
+      }
+     filter:{
+       "gt":
+     }
+   }
+--------------------------------------------------------
+4。full-txt search (全文检索) 全文检索的过程
+  对字段进行全文索引
+   1。先拆分字段
+   2。建立倒排索引
+----------------------------------------------
+5。phrase search (短语搜索)
+   match_phrase
+--------------------------------
+6。highlight search （高亮）
+ highlight:
+   fields:{
+     字段名字
+   }
+
+
+GET /product/_search
+
+GET /product/_search
+{
+  "query": {
+    "match": {
+      "name": "cindar"
+    }
+  },
+  "highlight": {
+    "fields": {
+      "name":{}
+    }
+  }
+}
+
+
+
+GET /product/_search
+{
+  "query": {
+    "match_phrase": {
+      "name": "cindar 001"
+    }
+  }
+}
+
+GET /product/_search
+{
+  "query": {
+    "match": {
+      "name": "qiding cindar 002"
+    }
+  }
+}
+
+
+
+GET /product/_search?pretty
+{
+  "query": {
+    "match": {
+      "name": "cindar"
+    }
+  }
+  , "sort": [
+    {
+      "price": {
+        "order": "desc"
+      }
+    }
+  ],
+  "from": 0,
+   "size":2
+}
+
+GET /product/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "_source":["price"]
+}
+
+
+GET /product/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+           "match":
+            {
+               "name": "cindar"
+            }
+        }
+      ],
+      "filter": {
+         "range": {
+           "price": {
+             "lt": 100
+           }
+         }
+      }
+    }
+  }
+}
+--------------------------------------------------------------------------------
+1。聚合分析
+  size=0  不显示source
+  aggs:{
+      "group_by_xxx":{
+         "terms":{
+           "field":""
+         }
+      }
+  }
+
+2。 先查询，然后聚合
+{
+   query:{
+   },
+   aggs:{
+   }
+}
+3.嵌套聚合，分组，平均值
+
+4。分组。平均值。排序
+
+5。先按照价格区间分组，然后在啊按照关键字分组，然后计算平均值
+
+
+GET /qiding-new/_search
+
+
+PUT /qiding-new/_mapping
+{
+  "properties": {
+    "tags":{
+      "fielddata":true,
+      "type": "text"
+    }
+  }
+}
+
+GET /qiding-new/_search
+{
+  "size": 0,
+  "aggs": {
+    "range_by_price": {
+      "range": {
+        "field": "price",
+        "ranges": [
+          {
+            "from": 0,
+            "to": 20
+          },
+          {
+            "from": 20,
+            "to": 40
+          },
+          {
+            "from": 40,
+            "to": 60
+          }
+        ]
+      },
+      "aggs": {
+        "group_by_tags": {
+          "terms": {
+            "field": "tags"
+          },
+          "aggs": {
+            "avg_price": {
+              "avg": {
+                "field": "price"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+GET /qiding-new/_search
+{
+  "size": 0,
+   "aggs": {
+     "group_by_tags": {
+       "terms": {
+         "field": "tags"
+         , "order": {
+           "avg_price": "asc"
+         }
+       },
+       "aggs": {
+         "avg_price": {
+           "avg": {
+             "field": "price"
+           }
+         }
+       }
+     }
+   }
+}
+
+
+
+GET /qiding-new/_search
+{
+   "aggs": {
+     "group_by_tags": {
+       "terms": {
+         "field": "tags"
+       },
+       "aggs": {
+         "avg_tags": {
+           "avg": {
+             "field": "price"
+           }
+         }
+       }
+     }
+   }
+}
+
+
+
+GET /qiding-new/_search
+{
+  "size": 20,
+  "query":{
+    "match":{
+       "name":"qiding"
+    }
+  },
+  "aggs": {
+    "group_by_tags": {
+      "terms": {
+        "field": "tags"
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+GET /qiding-new/_search
+{
+  "size": 0,
+  "aggs": {
+    "group_by_name": {
+      "terms": {
+        "field": "tags"
+      }
+    }
+  }
+}
+
+--------------------------------------------------------
+
+elasticsearch f
+
+
+
+
+
+
