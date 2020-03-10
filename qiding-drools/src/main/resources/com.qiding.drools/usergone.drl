@@ -1,0 +1,18 @@
+package rules;
+import com.qiding.demo.HelloWorld
+
+rule PeopleCome when
+      p:HelloWorld( gone == false)
+    then
+      System.out.println("hello come a person"+p.getName());
+      modify(p){setGone(true),setName( "fuck off" )}
+end
+
+rule  PeopleGone when
+    p: HelloWorld(gone== true)
+    then
+    System.out.println(" person go ,name is"+p.getName());
+    modify(p){setGone(false)}
+
+end
+
