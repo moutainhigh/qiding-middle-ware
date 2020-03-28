@@ -34,6 +34,7 @@ public class SearchMain {
 
 	public static void useTemplate(){
 		SearchService searchService=new SearchService(client);
+		baseSearch();
 //		searchService.useTemplate();
 	}
 
