@@ -1,4 +1,4 @@
-package com.qiding.test;
+package com.qiding.mysql;
 
 /**
  * Hello world!

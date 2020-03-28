@@ -1,19 +1,8 @@
-package com.qiding.test.netty.client;
+package com.qiding.state.netty.client;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.ByteBufUtil;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.util.ReferenceCountUtil;
-import io.netty.util.concurrent.Future;
-import io.netty.util.concurrent.GenericFutureListener;
-
-import javax.swing.plaf.basic.BasicTabbedPaneUI;
-import java.nio.ByteBuffer;
-import java.sql.Time;
-import java.util.concurrent.TimeUnit;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 

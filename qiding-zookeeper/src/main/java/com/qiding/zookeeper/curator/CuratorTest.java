@@ -1,4 +1,4 @@
-package com.qiding.demo.curator;
+package com.qiding.test.curator;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
@@ -6,9 +6,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.curator.test.TestingCluster;
 import org.apache.curator.test.TestingServer;
 import org.apache.curator.test.TestingZooKeeperServer;
-import org.apache.zookeeper.server.quorum.QuorumPeer;
 import org.apache.zookeeper.server.quorum.QuorumStats;
-import org.omg.CORBA.TIMEOUT;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;

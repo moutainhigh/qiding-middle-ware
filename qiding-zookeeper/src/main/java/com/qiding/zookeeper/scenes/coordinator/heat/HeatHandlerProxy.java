@@ -1,7 +1,5 @@
-package com.qiding.demo.scenes.coordinator.heat;
+package com.qiding.test.scenes.coordinator.heat;
 
-import com.google.gson.internal.$Gson$Preconditions;
-import org.apache.curator.framework.recipes.cache.ChildData;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
 
 import java.util.List;

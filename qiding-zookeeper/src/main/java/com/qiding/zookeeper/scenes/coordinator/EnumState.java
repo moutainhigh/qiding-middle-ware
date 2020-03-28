@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.coordinator;
+package com.qiding.test.scenes.coordinator;
 
 public enum  EnumState {
    RUNNING(1,"running"),

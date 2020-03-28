@@ -1,4 +1,4 @@
-package com.qiding.test.netty.server;
+package com.qiding.state.netty.server;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;
@@ -6,7 +6,6 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
 
-import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 
 public class ServerHandler extends ChannelInboundHandlerAdapter {

@@ -1,15 +1,13 @@
-package com.qiding.demo.index;
+package com.qiding.search.index;
 
-import com.qiding.demo.client.TransportClientFactory;
+import com.qiding.search.client.TransportClientFactory;
 import lombok.extern.log4j.Log4j2;
 import org.apache.lucene.queryparser.flexible.core.util.StringUtils;
 import org.elasticsearch.action.admin.indices.alias.Alias;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
-import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.xcontent.XContentBuilder;
-import org.elasticsearch.common.xcontent.XContentType;
 
 import java.io.IOException;
 import java.net.UnknownHostException;

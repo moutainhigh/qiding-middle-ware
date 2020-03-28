@@ -1,4 +1,4 @@
-package com.qiding.demo;
+package com.qiding.rocketmq;
 
 import org.apache.rocketmq.client.ClientConfig;
 import org.apache.rocketmq.client.impl.MQClientAPIImpl;

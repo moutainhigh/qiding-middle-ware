@@ -1,4 +1,4 @@
-package com.qiding.demo.roles;
+package com.qiding.test.roles;
 
 public interface Proposer {
     String getValue(String value);

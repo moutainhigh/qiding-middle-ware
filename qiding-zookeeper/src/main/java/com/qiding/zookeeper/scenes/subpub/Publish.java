@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.subpub;
+package com.qiding.test.scenes.subpub;
 
 import com.google.gson.Gson;
 import org.apache.curator.framework.CuratorFramework;
@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

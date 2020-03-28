@@ -1,12 +1,12 @@
-package com.qiding.test.impl;
+package com.qiding.redis.impl;
 
-import com.qiding.test.AbstractRedisService;
-import com.qiding.test.pojo.RedisNode;
+import com.qiding.redis.AbstractRedisService;
+import com.qiding.redis.pojo.RedisNode;
 import redis.clients.jedis.*;
 
 public class SingleRedis extends AbstractRedisService {
     private  JedisPool pool;
-    public SingleRedis(RedisNode[] redisNodes,String password) {
+    public SingleRedis(RedisNode[] redisNodes, String password) {
         super(redisNodes,password);
     }
 

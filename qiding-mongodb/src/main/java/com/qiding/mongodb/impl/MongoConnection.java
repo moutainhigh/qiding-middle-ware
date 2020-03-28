@@ -1,6 +1,5 @@
-package com.qiding.test.impl;
+package com.qiding.mongodb.impl;
 
-import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
@@ -8,12 +7,10 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.connection.ClusterType;
-import com.qiding.test.api.IConnection;
-import com.qiding.test.api.IDBConnection;
+import com.qiding.mongodb.api.IConnection;
+import com.qiding.mongodb.api.IDBConnection;
 
-import java.sql.BatchUpdateException;
 import java.util.Arrays;
-import java.util.List;
 
 public class MongoConnection implements IConnection, IDBConnection {
 

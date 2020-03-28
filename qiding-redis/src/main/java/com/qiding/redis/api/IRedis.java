@@ -1,7 +1,5 @@
-package com.qiding.test.api;
+package com.qiding.redis.api;
 
-import java.io.Closeable;
-import java.io.IOException;
 import java.time.Duration;
 
 public interface IRedis {

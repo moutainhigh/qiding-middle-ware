@@ -1,7 +1,7 @@
-package com.qiding.demo;
+package com.qiding.search;
 
-import com.qiding.demo.client.TransportClientFactory;
-import com.qiding.demo.search.SearchService;
+import com.qiding.search.client.TransportClientFactory;
+import com.qiding.search.search.SearchService;
 import org.elasticsearch.client.transport.TransportClient;
 
 import java.net.UnknownHostException;

@@ -1,4 +1,4 @@
-package com.qiding.demo.zookeeper;
+package com.qiding.test.zookeeper;
 
 import org.apache.zookeeper.*;
 

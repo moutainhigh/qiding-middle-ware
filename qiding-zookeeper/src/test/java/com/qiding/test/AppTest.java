@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 /**

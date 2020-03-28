@@ -1,4 +1,4 @@
-package com.qiding.demo;
+package com.qiding.jmx;
 
 import javax.management.MBeanServer;
 import javax.management.ObjectName;

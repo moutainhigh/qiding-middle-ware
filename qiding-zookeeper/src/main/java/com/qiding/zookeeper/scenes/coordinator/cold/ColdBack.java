@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.coordinator.cold;
+package com.qiding.test.scenes.coordinator.cold;
 
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
 

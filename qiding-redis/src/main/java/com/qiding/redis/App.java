@@ -1,13 +1,11 @@
-package com.qiding.test;
+package com.qiding.redis;
 
-import com.qiding.test.api.IRedis;
-import com.qiding.test.impl.ClusterRedis;
-import com.qiding.test.impl.SentinelRedis;
-import com.qiding.test.pojo.RedisNode;
+import com.qiding.redis.pojo.RedisNode;
+import com.qiding.redis.api.IRedis;
+import com.qiding.redis.impl.ClusterRedis;
+import com.qiding.redis.impl.SentinelRedis;
 
-import java.sql.Time;
 import java.time.Duration;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**

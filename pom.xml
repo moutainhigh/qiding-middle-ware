@@ -24,6 +24,14 @@
     <module>qiding-dubbo/qiding-dubbo-provider</module>
 	  <module>qiding-netty</module>
 	  <module>qiding-kubernetes</module>
+	  <module>qiding-hadoop</module>
+	  <module>qiding-hadoop-hdfs</module>
+	  <module>qiding-drools</module>
+	  <module>qiding-agenet</module>
+	  <module>qiding-limiter</module>
+	  <module>qiding-sentinel</module>
+	  <module>qiding-leetcode</module>
+	  <module>qiding-poi</module>
   </modules>
 
   <name>qiding-middle-ware</name>

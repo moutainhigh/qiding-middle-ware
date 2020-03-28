@@ -1,12 +1,10 @@
-package com.qiding.demo;
+package com.qiding.search;
 
-import com.qiding.demo.client.DocumentFun;
-import com.qiding.demo.client.TransportClientFactory;
+import com.qiding.search.client.DocumentFun;
+import com.qiding.search.client.TransportClientFactory;
 import lombok.extern.log4j.Log4j2;
 import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.transport.Transport;
 
-import javax.print.Doc;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 

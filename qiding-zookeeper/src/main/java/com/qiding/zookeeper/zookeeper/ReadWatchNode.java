@@ -1,4 +1,4 @@
-package com.qiding.demo.zookeeper;
+package com.qiding.test.zookeeper;
 
 import com.google.gson.Gson;
 import org.apache.zookeeper.*;

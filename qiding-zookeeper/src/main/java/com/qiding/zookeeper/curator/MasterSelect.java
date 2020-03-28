@@ -1,4 +1,4 @@
-package com.qiding.demo.curator;
+package com.qiding.test.curator;
 
 import com.google.gson.Gson;
 import org.apache.curator.framework.CuratorFramework;

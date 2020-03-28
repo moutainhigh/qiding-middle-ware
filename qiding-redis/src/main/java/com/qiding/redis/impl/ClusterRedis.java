@@ -1,10 +1,8 @@
-package com.qiding.test.impl;
+package com.qiding.redis.impl;
 
-import com.qiding.test.AbstractClusterRedisService;
-import com.qiding.test.AbstractRedisService;
-import com.qiding.test.pojo.RedisNode;
+import com.qiding.redis.pojo.RedisNode;
+import com.qiding.redis.AbstractClusterRedisService;
 import redis.clients.jedis.HostAndPort;
-import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
 import redis.clients.jedis.Protocol;
 
@@ -13,7 +11,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ClusterRedis extends AbstractClusterRedisService {
-    public ClusterRedis(RedisNode[] redisNodes,String password) {
+    public ClusterRedis(RedisNode[] redisNodes, String password) {
         super(redisNodes,password);
     }
 

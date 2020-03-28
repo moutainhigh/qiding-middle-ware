@@ -1,4 +1,4 @@
-package com.qiding.demo.curator;
+package com.qiding.test.curator;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
@@ -6,7 +6,6 @@ import org.apache.curator.framework.recipes.barriers.DistributedBarrier;
 import org.apache.curator.framework.recipes.barriers.DistributedDoubleBarrier;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 
-import java.net.SocketTimeoutException;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
