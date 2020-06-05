@@ -1,0 +1,36 @@
+1.底层数据结构
+   ziplist
+   hashtable
+
+   转化：
+      1.键、值的长度不能超过64字节 hash-max-ziplist-value
+      2.键值对不超过 hash-max-ziplist-entries
+
+
+  操作：
+      HSET
+        ziplist  1把键推入到压缩列表 、2把值推入到压缩列表
+        hashtable 把新节点加入到字典里面
+      HGET
+        ziplist调用find，定位到键值，然后查看ziplist获取到值
+        hashtable 定位到键，然后获取到value
+      HEXISTS
+         ziplist调用 ziplistfind查找到键，存在就说明存在
+         hashtable 定位到键，存在就存在，不存在就不存在
+
+      命令
+        HDEL
+        HExists
+        HGET
+        HGETALL
+        HINCRBY
+        HINCRBYFLOAT
+        HKEYS
+        HLEN
+        HMGET
+        HMSET
+        HSET
+        HSETNX
+        HSTRLEN
+        HVALS
+        HSCAN

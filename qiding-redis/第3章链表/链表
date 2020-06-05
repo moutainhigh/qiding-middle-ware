@@ -1,0 +1,18 @@
+1.链表的数据结构
+   节点
+     listNode{
+       listNode prex;
+       listNode next;
+     }
+
+    list的结构
+    {
+      head
+      tail
+      len
+      无环
+    }
+
+
+
+redis链表

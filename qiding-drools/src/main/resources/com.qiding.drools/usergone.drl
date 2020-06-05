@@ -1,17 +1,47 @@
 package rules;
 import com.qiding.drools.HelloWorld
+import sun.lwawt.macosx.CSystemTray
 
-rule PeopleCome when
-      p:HelloWorld( gone == false)
-    then
-      System.out.println("hello come a person"+p.getName());
-      modify(p){setGone(true),setName( "fuck off" )}
+//rule PeopleCome
+// when
+//      p:HelloWorld( gone == false)
+// then
+// System.out.println("hello come a person"+p.getName());
+// modify(p){setGone(true),setName( "fuck off" )}
+//end
+//
+//rule  PeopleGone
+//    when
+//    p: HelloWorld(gone== true)
+//    then
+//    System.out.println(" person go ,name is "+p.getName());
+//     modify(p){setGone(false)}
+//end
+
+
+rule "ruleA"
+agenda-group "ruleA-group"
+salience 200
+when
+  $fact: HelloWorld(gone== true)
+then
+   System.out.println("RuleA: "+$fact);
+   $fact.setAge(100);
+   update($fact)
 end
 
-rule  PeopleGone when
-    p: HelloWorld(gone== true)
-    then
-    System.out.println(" person go ,name is "+p.getName());
-     modify(p){setGone(false)}
+rule "ruleB"
+agenda-group "ruleB-group"
+salience 100
+when
+  $fact: HelloWorld(age== 100)
+then
+  System.out.println("ruleB: person go ,name is "+$fact);
+  $fact.setGone(true);
+ // update($fact)
 end
+
+
+
+
 

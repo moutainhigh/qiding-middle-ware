@@ -1,0 +1,40 @@
+1.字符串对象编码
+    int
+       保存的对象是int
+    raw
+       长度大于32 位
+       第一次内存分配 redisobject
+       第二次内存分配 sdshar
+
+    embstr（只读）
+       调用一次内存分配
+
+
+   long double， 先把字符串转化位数字，  然后执行相加，存入字符串
+
+  类型转化
+     int->raw  append操作，会把int转为raw
+
+
+     set
+        int 存储类型为int
+        embstr 存储数据类型为 long dobule，短字符串（<32）
+        raw 对象转为（>32）
+     get
+
+
+     append
+
+        把 int，embstr 转化为 raw
+     incrbyfloat 把int转为 embstr
+     incrby 只对整数操作
+     decrby 只对整数操作
+     strlen
+        int 获取对象的copy，然后转为字符串，获取长度
+        embstr，raw 直接调用sdslen获取长度
+     setrange
+       int，embstr 转化为raw，按照 raw执行命令
+     getrange
+        int 获取对象copy，然后转为字符串，返回字符串
+        embstr 直接获取制定位置的字符
+        raw 获取制定位置的字符

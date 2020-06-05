@@ -1,0 +1,34 @@
+1.开启慢查询
+   config set slowlog-log-slow-than  xxx 超时时间
+   config set slowlog-max-len 超时日志长度
+2.详细介绍
+     1) (integer) 9  命令的唯一标示
+     2) (integer) 1590898631 执行的时间戳
+     3) (integer) 6 执行时常 微妙计算
+     4) 1) "set"   执行的命令
+        2) "C"
+        3) "d"
+
+数据结构
+   redisServer{
+     long long slow_log_id 最新的日志ID
+     list slow_log* 超时的日志
+     slowlog_log_show_than
+     slowlog-max-len 最大数
+   }
+   slowlogEntry{
+     logid 标示
+     time 开始时间
+     duration 耗费时间
+     []argv  函数和参数
+     args 参数个数
+   }
+
+1.判断慢查询是否开启
+2.比较是否加入到log链表
+3.表头放入新的log
+4.删除表尾log
+
+
+
+

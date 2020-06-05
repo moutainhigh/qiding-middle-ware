@@ -1,0 +1,32 @@
+1.底层编码
+     ziplist
+     skiplist
+
+  ziplist
+    zip节点对象 {value,score}
+    分数小的放到靠近表头的方向
+
+ 1. ziplist->skiplist
+    有序集合保存的元素小于 zset-max-ziplist-entries
+    元素的长度小于zset-max-ziplist-value
+
+ 2.跳表的查询
+
+
+ 3.指令
+    ZADD  添加一个元素
+    ZCARD 获取集合元素的数量
+    ZCOUNT 计算分数范围内的成员数量
+    ZINCRBY 增加积分
+
+    ZLEXCOUNT 成员之间的数量
+
+    ZPOPMAX 删除最大值
+    ZPOPMIN 删除最小值
+    ZRANGE 遍历输出 ZRANGEBYLEX    ZRANGEBYSCORE
+
+
+
+
+
+

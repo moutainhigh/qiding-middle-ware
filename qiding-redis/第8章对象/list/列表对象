@@ -1,0 +1,84 @@
+支持编码
+   ziplist
+   linkedlist
+
+已经替换为qucklist
+   https://blog.csdn.net/zhaoliang831214/article/details/82054476
+
+
+
+
+quicklist
+   ziplist
+       1.双向链表便于在表的两端进行push和pop操作，但是它的内存开销比较大。
+          首先，它在每个节点上除了要保存数据之外，还要额外保存两个指针；其次，双向链表的各个节点是单独的内存块，地址不连续，节点多了容易产生内存碎片。
+       3.ziplist由于是一整块连续内存，所以存储效率很高。
+         但是，它不利于修改操作，每次数据变动都会引发一次内存的realloc。特别是当ziplist长度很长的时候，
+         一次realloc可能会导致大批量的数据拷贝，进一步降低性
+
+ziplist
+  通过设置 list-max-ziplist-size为
+      正数，每个zipnode上的最大节点数
+      负数
+        -5: 每个quicklist节点上的ziplist大小不能超过64 Kb。（注：1kb => 1024 bytes）
+        -4: 每个quicklist节点上的ziplist大小不能超过32 Kb。
+        -3: 每个quicklist节点上的ziplist大小不能超过16 Kb。
+        -2: 每个quicklist节点上的ziplist大小不能超过8 Kb。（-2是Redis给出的默认值）
+        -1: 每个quicklist节点上的ziplist大小不能超过4 Kb。
+
+
+quicklist的结构为什么这样设计呢？总结起来，大概又是一个空间和时间的折中：
+
+        双向链表便于在表的两端进行push和pop操作，但是它的内存开销比较大。
+    首先，它在每个节点上除了要保存数据之外，还要额外保存两个指针；
+    其次，双向链表的各个节点是单独的内存块，地址不连续，节点多了容易产生内存碎片。
+
+       ziplist由于是一整块连续内存，所以存储效率很高。
+    但是，它不利于修改操作，每次数据变动都会引发一次内存的realloc。特别是当ziplist长度很长的时候，
+    一次realloc可能会导致大批量的数据拷贝，进一步降低性能。
+
+
+quicklist 策略
+        每个quicklist节点上的ziplist越短，则内存碎片越多。内存碎片多了，有可能在内存中产生很多无法被利用的小碎片，
+    从而降低存储效率。这种情况的极端是每个quicklist节点上的ziplist只包含一个数据项，这就蜕化成一个普通的双向链表了。
+        每个quicklist节点上的ziplist越长，则为ziplist分配大块连续内存空间的难度就越大。
+    有可能出现内存里有很多小块的空闲空间（它们加起来很多），但却找不到一块足够大的空闲空间分配给ziplist的情况。
+    这同样会降低存储效率。这种情况的极端是整个quicklist只有一个节点，所有的数据项都分配在这仅有的一个节点的ziplist里面。
+    这其实蜕化成一个ziplist了。
+
+
+list-compress-depth 0
+  0: 是个特殊值，表示都不压缩。这是Redis的默认值。
+  1: 表示quicklist两端各有1个节点不压缩，中间的节点压缩。
+  2: 表示quicklist两端各有2个节点不压缩，中间的节点压缩。
+  3: 表示quicklist两端各有3个节点不压缩，中间的节点压缩。
+
+操作命令：
+     阻塞操作
+        BLPOP 弹出左边元素，阻塞，直到存在某个元素
+        BRPOP 弹出右边元素，阻塞，直到存在某个元素
+        BRPOPLPUSH 弹出所有元素，然后转移到另外一个链表
+
+     查询操作
+       LINDEX 获取指定位置的值
+       Linsert 指定元素插入数据
+       LLEN  字段长度
+       LPOP  弹出左边元素
+       LPUSH 左边插入元素
+       LPUSHX 链表存储，插入元素
+       LRANGE 遍历
+       LREM  按照value值删除
+       LSET  设置索引对应的值
+       LTRIM 截取链表
+       RPOP 右边染出
+       RPOPLPUSH 追加到
+       RPUSH  右边加入数据
+       RPUSHX 右边加入数据
+
+
+     LPUSH
+     RPUHSH
+     LPOP
+     RPOP
+     Lindex
+

@@ -23,9 +23,10 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		try {
 			ByteBuf in = (ByteBuf) msg;
-			TimeUnit.SECONDS.sleep(10);
+			//TimeUnit.SECONDS.sleep(10);
 			in.markReaderIndex();
 			ByteBuf out = ctx.alloc().buffer();
+			System.out.println(new String(ByteBufUtil.getBytes(in)));
 			out.writeBytes(ByteBufUtil.getBytes(in));
 			ctx.writeAndFlush(out);
 			ctx.close();

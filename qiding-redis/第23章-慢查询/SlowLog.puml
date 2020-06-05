@@ -1,0 +1,17 @@
+@startuml
+
+class RedisServer{
+   +slowLogLogId:long
+   +slowLogLogSlowThan:long
+   +slowLog:List<SlowLogEntity>
+   +slowLogMaxLen:Long
+}
+class SlowLogEntity{
+   id:long
+   time:timestamp
+   duration:long
+   args:[]
+   argsLen:long
+}
+RedisServer -* SlowLogEntity
+@enduml

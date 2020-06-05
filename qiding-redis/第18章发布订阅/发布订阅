@@ -1,0 +1,39 @@
+1.发布订阅功能
+  subscribe 订阅通道
+     subscribe channel [channel2]
+     指令：subscribe 订阅某一个channel
+  psubscribe
+     psubscribe channel-pattern
+     模糊匹配channel订阅指令
+
+  publish 发布消息
+    publish channel 发布消息
+
+数据结构
+订阅 (scribe)
+   redisServer{
+      dict * pubsub_channels
+   }
+
+
+pubsub_channels
+    channelA-> 订阅者A->订阅者B
+    channelB-> 订阅者A->订阅者B
+    channelC-> 订阅者A->订阅者B
+
+
+
+订阅模式（psubscribe）
+ redisServer{
+      dict * pubsubpattern_channels
+   }
+
+
+发布命令
+    pushlish(scribe)
+    pushlish(pscribe)
+
+查看订阅的channel
+    pubsub channels 查看所有的channel
+    pubsub sumsub  channel 名字 统计订阅者总数
+    pubsub sumpat 返回 pubsubpattern_channels 的长度

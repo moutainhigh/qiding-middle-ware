@@ -1,0 +1,41 @@
+事务有关指令
+  1.multi, exec ,discard , watch
+
+redis事务
+
+  1.事务状态保存在本地
+  2.本地保存了一个 命令的列表
+  3.exec会把本地的数据提价服务器
+
+    redisClient{
+       multiState *state /mulit.exec/
+    }
+
+    queue {
+       argv  [{type,data},{type,data}] [{"stringObject","set"},{"stringObject","name"},{"stringObject","qiding"}]
+       argc
+    }
+
+
+
+watch(乐观锁)  watch
+    监控key值，如果 后续的在 multi之前key有变化，提交失败
+    服务端保存 客户端的事务状态
+
+    redisDb{
+      clientCasStatus;//客户端状态
+    }
+
+    如果设置完成，直接修改 client的值
+
+
+事务
+  原子性：不支持回滚，如果一个失败，不影响正常的使用
+  一致性：
+    入队错误：提交以前一个失败，不可以提交
+    执行出错：
+    服务器死机
+  隔离性：
+
+
+

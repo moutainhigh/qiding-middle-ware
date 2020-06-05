@@ -1,0 +1,46 @@
+1.数据结构
+   动态字符串 sds
+   双向链表 list
+   跳跃表
+   字典表
+   压缩表
+   整数集合
+
+2.对象分类
+    字符串对象
+    哈希对象
+    列表对象
+    集合对象
+    有序集合对象
+
+创建2个对象，键对象，值对象
+对象结构
+    {
+      type   :Redis_string、redis_list、redis_hash(H),redis_set(S),redis_zset(Z)
+      encoding ： redis_encoding_(int\EMBSTR\raw\ht\linklist\ziplist\intset\skiplist\
+      *ptr
+    }
+
+对象和类型编码
+
+
+   类型检查
+   多态实现
+
+
+  内存回收
+     统计计数法，饮用
+
+  对象共享
+     数据库保存了 0-9999所有整数值
+
+
+  redisObject{
+     type
+     encoding
+     ptr
+     refcount
+     lru 最后一次被命令访问的时间
+  }
+
+ 服务器打开 maxmemory

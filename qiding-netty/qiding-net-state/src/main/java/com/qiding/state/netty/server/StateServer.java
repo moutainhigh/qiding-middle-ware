@@ -32,7 +32,7 @@ public class StateServer {
 					ch.pipeline().addFirst(new ServerHandler());
 				}
 			})
-			.childOption(ChannelOption.)
+//			.childOption(ChannelOption.)
 			.childOption(ChannelOption.SO_KEEPALIVE,true);
 
 		ChannelFuture future=bootstrap.bind(port).sync();

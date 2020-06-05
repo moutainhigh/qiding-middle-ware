@@ -1,5 +1,7 @@
 package com.qiding.drools;
 
+import org.drools.core.base.RuleNameEndsWithAgendaFilter;
+import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.builder.KieFileSystem;
 import org.kie.api.command.Command;
@@ -7,8 +9,10 @@ import org.kie.api.runtime.ExecutionResults;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.StatelessKieSession;
+import org.kie.api.runtime.rule.Agenda;
 import org.kie.api.runtime.rule.FactHandle;
 import org.kie.internal.command.CommandFactory;
+import org.kie.internal.ruleunit.RuleUnitUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,13 +33,31 @@ public class App
         System.out.println( "Hello World!" );
 
         KieServices kieServices = KieServices.Factory.get();
+		kieServices.newKieBaseConfiguration();
+
 		KieContainer kieContainer =kieServices.getKieClasspathContainer();
+		KieBase kieBase=kieContainer.getKieBase();
+
+
+
+
+
+
+
 		KieSession kieSession = kieContainer.newKieSession("all-rules");
 
 
 
+
+
+
+
+
+
+
+
 		//基本对象
-		final HelloWorld qi=	HelloWorld.builder().age(100).name("qi").gone(false).build();
+		final HelloWorld qi=	HelloWorld.builder().age(100).name("qi").gone(true).build();
 		final HelloWorld ding=	HelloWorld.builder().age(100).name("ding").gone(false).build();
 		StatelessKieSession statelessKieSession = kieContainer.newStatelessKieSession("all-rules-2");
 		statelessKieSession.execute(CommandFactory.newInsert(qi));
@@ -50,6 +72,9 @@ public class App
 		ExecutionResults results=statelessKieSession.execute(CommandFactory.newBatchExecution(commands));
 		System.out.println(results.getValue("qi"));
 		System.out.println(results.getValue("ding"));
+
+
+
 
 
 
@@ -79,7 +104,14 @@ public class App
 
 		TimeUnit.SECONDS.sleep(5);
 		helloWorld.setGone(false);
+
+		Agenda agenda= kieSession.getAgenda();
+		agenda.getAgendaGroup("ruleA-group").setFocus();
 		kieSession.fireAllRules();
+
+		kieSession.fireAllRules(new RuleNameEndsWithAgendaFilter("ruleA"));
+
+
 		System.out.println("更新状态成功");
 
 

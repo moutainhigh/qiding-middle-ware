@@ -50,6 +50,7 @@
 		<module>qiding-hadoop</module>
 		<module>qiding-hadoop-hdfs</module>
 		<module>qiding-drools</module>
+		<module>qiding-push</module>
 		<!--    <module>qiding-limiter</module>-->
 	</modules>
 
