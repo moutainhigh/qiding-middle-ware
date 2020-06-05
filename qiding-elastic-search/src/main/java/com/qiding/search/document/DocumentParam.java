@@ -1,4 +1,4 @@
-package com.qiding.demo.document;
+package com.qiding.search.document;
 import com.google.gson.Gson;
 import lombok.Data;
 import org.elasticsearch.common.geo.GeoJson;

@@ -1,4 +1,4 @@
-package com.qiding.demo.client;
+package com.qiding.search.client;
 
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;

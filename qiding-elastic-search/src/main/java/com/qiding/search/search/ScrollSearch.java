@@ -1,4 +1,4 @@
-package com.qiding.demo.search;
+package com.qiding.search.search;
 
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchScrollRequest;
@@ -14,7 +14,7 @@ public class ScrollSearch {
 
 
 
-		client.prepareSearch("index")
+//		client.prepareSearch("index")
 	}
 
 	public void scrollSearch(String scrollId,Long timeout){

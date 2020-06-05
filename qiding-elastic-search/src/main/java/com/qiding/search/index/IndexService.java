@@ -1,6 +1,6 @@
-package com.qiding.demo.index;
+package com.qiding.search.index;
 
-import com.qiding.demo.client.TransportClientFactory;
+import com.qiding.search.client.TransportClientFactory;
 import lombok.extern.log4j.Log4j2;
 import org.apache.lucene.queryparser.flexible.core.util.StringUtils;
 import org.elasticsearch.action.admin.indices.alias.Alias;

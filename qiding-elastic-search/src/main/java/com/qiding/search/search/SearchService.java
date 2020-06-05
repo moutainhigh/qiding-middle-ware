@@ -1,4 +1,4 @@
-package com.qiding.demo.search;
+package com.qiding.search.search;
 
 import lombok.extern.log4j.Log4j2;
 import org.apache.lucene.util.CollectionUtil;

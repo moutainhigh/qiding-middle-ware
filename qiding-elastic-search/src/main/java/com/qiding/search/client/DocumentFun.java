@@ -1,4 +1,4 @@
-package com.qiding.demo.client;
+package com.qiding.search.client;
 
 import com.qiding.demo.document.DocumentParam;
 import lombok.extern.log4j.Log4j2;
