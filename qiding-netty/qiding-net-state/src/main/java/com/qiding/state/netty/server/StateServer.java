@@ -1,6 +1,5 @@
-package com.qiding.test.netty.server;
+package com.qiding.state.netty.server;
 
-import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -33,6 +32,7 @@ public class StateServer {
 					ch.pipeline().addFirst(new ServerHandler());
 				}
 			})
+//			.childOption(ChannelOption.)
 			.childOption(ChannelOption.SO_KEEPALIVE,true);
 
 		ChannelFuture future=bootstrap.bind(port).sync();

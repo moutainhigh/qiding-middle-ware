@@ -2,7 +2,7 @@ package com.qiding.search;
 
 import com.qiding.search.client.TransportClientFactory;
 import com.qiding.search.search.SearchService;
-import org.elasticsearch.action.search.SearchRequestBuilder;
+
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -46,7 +46,7 @@ public class SearchMain {
 
 
 	public static void main(String[] args) {
-		QueryBuilders queryBuilders=QueryBuilders.wildcardQuery("",)
+		//QueryBuilders queryBuilders=QueryBuilders.wildcardQuery("",)
 
 
 		//useTemplate();

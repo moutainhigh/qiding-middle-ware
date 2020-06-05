@@ -1,0 +1,9 @@
+1.客户端执行monitor之后，可以把 其他端执行的redis命令打印处理
+2.
+  RedisServer{
+     ...
+      (链表) monitors->monitorA->monitorB->monitorC
+     ...
+
+
+  }

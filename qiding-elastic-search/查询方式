@@ -53,6 +53,58 @@
      }
    }
 --------------------------------------------------------
+  put    /index/_doc/1
+
+    {
+      name:"aaa  bbb cccc"
+      age:001
+    }
+
+  put    /index/_doc/2
+
+    {
+      name:"bbb cccc"
+
+       age:002
+    }
+
+
+ aaa  1
+ bbb  1,2
+ ccc  2
+ 001 1
+ 002 2
+
+
+
+
+
+
+get /index/_doc
+{
+   query:{
+     match:{ name :"aaa bbb"}
+    }
+ }
+
+
+ aaa
+ bbb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 4。full-txt search (全文检索) 全文检索的过程
   对字段进行全文索引
    1。先拆分字段

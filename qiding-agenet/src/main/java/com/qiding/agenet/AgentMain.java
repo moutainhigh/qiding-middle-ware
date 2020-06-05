@@ -17,61 +17,128 @@ public class AgentMain {
 		ClassPool classPool = ClassPool.getDefault();
 		//添加字节码转换器
 		inst.addTransformer((loader, className, classBeingRedefined, protectionDomain, classfileBuffer) -> {
-			try {
-				String realClassName = className.replace("/", ".");
-                               // System.out.println(className+"======="+realClassName);
-                                if( realClassName.startsWith("com.sun")||realClassName.startsWith("apple")||realClassName.startsWith("com.apple")||realClassName.startsWith("java")||realClassName.startsWith("jdk")||realClassName.startsWith("sun")){
-                                 //   System.out.println(realClassName+"startsWith java pass");
-                                    return null;
-                                }
-				//System.out.println(realClassName);
-				CtClass ctClass = classPool.getCtClass(realClassName);
-				CtMethod[] methods = ctClass.getDeclaredMethods();
-				for (CtMethod method : methods) {
-					StringBuilder sb = new StringBuilder();
-					sb.append("System.out.print(\"params:[\");");
-//					int length = method.getMethodInfo().getCodeAttribute().getAttributes().size();
-					int length=method.getParameterTypes().length;
-					for (int i = 0; i <length; i++) {
-						sb.append("System.out.print($" + (i + 1) + ");");
-						sb.append("System.out.print(\",\");");
-					}
-					sb.append("System.out.print(\"];class:\");");
-					sb.append("String className=$class.getName();");
-					//获取方法sb.append("")
-					sb.append("System.out.println(className);");
-                                       // System.out.println(sb.toString());
-					method.insertBefore(sb.toString());
-					//					StringBuilder body=new StringBuilder();
-//					body.append("System.err.print(\"params<<\");");
-//					body.append("System.err.print($$);");
-//					body.append("System.err.print(\">>\");");
-//					body.append("return $proceed($$);");
-//					method.setBody(body.toString());
-				}
-				return ctClass.toBytecode();
-			} catch (Exception e) {
-			  // e.printStackTrace();
+			
+          try {
+
+
+			String realClassName = className.replace("/", ".");
+
+            if (realClassName.startsWith("java")) {
+            	return null;
+            	
+            }
+
+            if (realClassName.startsWith("sun.nio.ch")||realClassName.startsWith("sun.nio.cs")||realClassName.startsWith("sun.text.normalizer")){
+            	return null;
+            	
+            }
+
+               
+           if (realClassName.startsWith("jdk.internal.logger")) {
+            	return null;
+            	
+            }
+
+            if (realClassName.startsWith("sun.util.logging")) {
+            	return null;
+            	
+            } 
+
+
+            if (realClassName.startsWith("sun.util.locale")||realClassName.startsWith("sun.util.locale")) {
+            	return null;
+            	
+            }             
+
+            if(realClassName.startsWith("sun.security")){
+            	return null;
+            }
+
+            if(realClassName.startsWith("com.sun.crypto.provider")){
+            	return null;
+            }
+
+            if(realClassName.startsWith("jdk.internal.reflect")){
+            	return null;
+            }
+
+            if(realClassName.startsWith("sun.reflect.generics")){
+            	return null;
+            }
+
+            if(realClassName.startsWith("sun.util.calendar")){
+            	return null;
+            }
+
+
+            // if(realClassName.startsWith("jdk.internal.reflect")){
+            // 	return null;
+            // }
+              
+              
+           
+
+
+     
+
+            //  if(realClassName.startsWith("java")){
+            //  	return null;
+            //  }
+
+
+			CtClass ctClass=classPool.getOrNull(realClassName);
+			if (ctClass==null){
+				System.out.println(realClassName +"不存在");
+				return null;
 			}
-			//System.out.println(className);
-			//if(className.replace("/",".").equals(cname)||className.replace("/",".").equals(cname2)){
-			//开始修改原有的类
-//			 	  classPool.insertClassPath(new LoaderClassPath(loader));
-//				 //
-//				 try {
-//					 CtClass ctClass=classPool.getCtClass(cname);
-//					 System.out.println(new String(ctClass.toBytecode()));
-//					 CtMethod[] methods=ctClass.getDeclaredMethods();
-//					 for(CtMethod method:methods){
-//						 method.insertBefore("System.err.println($1);\nSystem.err.println(System.currentTimeMillis());");
-//					 }
-//					 return ctClass.toBytecode();
-//				 } catch (Exception e) {
-//					 e.printStackTrace();
-//				 }
-			//}
-			//System.out.println(className);
-			return null;
+			
+			if (ctClass.isInterface()) {
+				System.out.println("接口不处理");
+				return  null;
+			}
+
+			CtMethod[] methods = ctClass.getDeclaredMethods();
+			for (CtMethod method : methods) {
+				if (method.isEmpty()) {
+					continue;
+				}
+				StringBuilder sb = new StringBuilder();
+				// sb.append("System.out.print(\"params:[\");");
+				// int length =0;
+				// try {
+				// 	length=method.getParameterTypes().length;
+				// }catch (Exception e){
+				// 	//e.printStackTrace();
+				// 	System.out.println("参数不存在");
+				// 	continue;
+				// }
+				// for (int i = 0; i < length; i++) {
+				// 	//sb.append("new Throwable().printStackTrace();");
+				// 	sb.append("System.out.print($" + (i + 1) + ");");
+				// 	sb.append("System.out.print(\",\");");
+				// }
+				// sb.append("System.out.print(\"];class:\");");
+				//sb.append("String className=$class.getName();");
+				//获取方法sb.append("")
+				sb.append("System.out.println(this.getClass().getName());");
+				// System.out.println(sb.toString());
+				try {
+					method.insertBefore(sb.toString());
+				}catch (Exception e){
+					//e.printStackTrace();
+                    continue;
+				}
+			}
+			try {
+				return ctClass.toBytecode();
+			}catch (Exception e){
+				//e.printStackTrace();
+               return  null;
+			}
+         }catch(Exception e){
+         	return null;
+         }
+
 		});
 		System.out.println("agent premain end");
 	}

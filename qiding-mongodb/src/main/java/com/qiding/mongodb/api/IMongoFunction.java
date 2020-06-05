@@ -1,4 +1,4 @@
-package com.qiding.test.api;
+package com.qiding.mongodb.api;
 
 public interface IMongoFunction {
     //1. connect

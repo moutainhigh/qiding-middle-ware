@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.lbs;
+package com.qiding.test.scenes.lbs;
 
 
 import org.apache.curator.framework.recipes.atomic.AtomicValue;
@@ -7,8 +7,6 @@ import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.data.Stat;
-
-import java.util.Arrays;
 
 public class RegisterImpl  extends AbstractZkClient implements Register {
 

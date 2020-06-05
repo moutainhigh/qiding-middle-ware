@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.lbs;
+package com.qiding.test.scenes.lbs;
 
 import java.net.Inet4Address;
 import java.util.concurrent.CountDownLatch;

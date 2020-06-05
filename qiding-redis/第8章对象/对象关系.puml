@@ -1,0 +1,51 @@
+@startuml
+'object Object01
+'object Object02
+'object Object03
+'object Object04
+'object Object05
+'object Object06
+'object Object07
+'object Object08
+'
+'Object01 <|-- Object02
+'Object03 *-- Object04
+'Object05 o-- "4" Object06
+'Object07 .. Object08 : some labels
+
+
+'基础数据对象
+object redis_encoding_int
+object redis_encoding_embstr
+object redis_encoding_raw
+object redis_ziplist
+object redis_likedlist
+object redis_ht
+object redis_intset
+object redis_skiplist
+
+'对象
+object string
+object list
+object hash
+object set
+object zset
+
+string .. redis_encoding_int : 使用整数实现
+string .. redis_encoding_embstr: 使用embstr编码实现的简单动态字符串
+string .. redis_encoding_raw: 简单动态字符串
+
+
+list .. redis_likedlist: 使用双端列表实现的列表对象
+list .. redis_ziplist: 使用压缩列表实现的列表对象
+
+hash .. redis_ziplist: 使用压缩列表实现hash对象
+hash .. redis_ht: 使用hash实现的hash对象
+
+set .. redis_intset: 使用整数集合实现的集合对象
+set .. redis_ht: 使用字典实现的集合对象
+
+zset .. redis_ziplist: 使用压缩链表实现的有序集合
+zset .. redis_skiplist: 使用跳表实现有序集合
+
+@enduml

@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.subpub;
+package com.qiding.test.scenes.subpub;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

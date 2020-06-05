@@ -1,4 +1,4 @@
-package com.qiding.demo.zkclient;
+package com.qiding.test.zkclient;
 
 import org.I0Itec.zkclient.ZkClient;
 

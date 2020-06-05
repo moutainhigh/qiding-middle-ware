@@ -1,9 +1,8 @@
-package com.qiding.test;
+package com.qiding.redis;
 
-import com.qiding.test.api.IRedis;
-import com.qiding.test.pojo.RedisNode;
+import com.qiding.redis.api.IRedis;
+import com.qiding.redis.pojo.RedisNode;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.time.Duration;

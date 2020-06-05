@@ -1,0 +1,997 @@
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T02:33:14+08:00)
+Maven home: /Users/qiding/systemtools/maven/apache-maven-3.5.4
+Java version: 1.8.0_171, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre
+Default locale: en_CN, platform encoding: UTF-8
+OS name: "mac os x", version: "10.15.4", arch: "x86_64", family: "mac"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.util.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from /Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/settings.xml
+[DEBUG] Reading user settings from /Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/settings-home.xml
+[DEBUG] Reading global toolchains from /Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/toolchains.xml
+[DEBUG] Reading user toolchains from /Users/qiding/.m2/toolchains.xml
+[DEBUG] Using local repository at /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib
+[INFO] Scanning for projects...
+[DEBUG] Using mirror alimaven (http://maven.aliyun.com/nexus/content/groups/public/) for central (https://repo.maven.apache.org/maven2).
+[DEBUG] Extension realms for project com.qiding.push:qiding-push:jar:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.qiding.push:qiding-push:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.vivo:vPush-server-sdk:jar should not point at files within the project directory, ${project.basedir}/src/main/libs/vPush-server-sdk-1.0.jar will be unresolvable by dependent projects @ line 45, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.qiding.push:qiding-push:jar:1.0-SNAPSHOT
+[DEBUG] Tasks:   [clean, package]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --------------------< com.qiding.push:qiding-push >---------------------
+[INFO] Building qiding-push 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.qiding.push:qiding-push:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] Repositories (dependencies): [alimaven (http://maven.aliyun.com/nexus/content/groups/public/, default, releases)]
+[DEBUG] Repositories (plugins)     : [alimaven (http://maven.aliyun.com/nexus/content/groups/public/, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${maven.clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${maven.clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.build.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value="false">${maven.clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${maven.clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.0.2:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>${maven.compiler.release}</release>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.6">8</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.6">8</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:3.0.2:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <project default-value="${project}"/>
+  <release>${maven.compiler.release}</release>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.6">8</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.6">8</target>
+  <testPath default-value="${project.testClasspathElements}"/>
+  <testRelease>${maven.compiler.testRelease}</testRelease>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <additionalClasspathElements>${maven.test.additionalClasspath}</additionalClasspathElements>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <classpathDependencyExcludes>${maven.test.dependency.excludes}</classpathDependencyExcludes>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <dependenciesToScan>${dependenciesToScan}</dependenciesToScan>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <encoding default-value="${project.reporting.outputEncoding}">${surefire.encoding}</encoding>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <excludesFile>${surefire.excludesFile}</excludesFile>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkCount default-value="1">${forkCount}</forkCount>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessExitTimeoutInSeconds default-value="30">${surefire.exitTimeout}</forkedProcessExitTimeoutInSeconds>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <includesFile>${surefire.includesFile}</includesFile>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <junitPlatformArtifactName default-value="org.junit.platform:junit-platform-engine">${junitPlatformArtifactName}</junitPlatformArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <parallelOptimized default-value="true">${parallelOptimized}</parallelOptimized>
+  <parallelTestsTimeoutForcedInSeconds>${surefire.parallel.forcedTimeout}</parallelTestsTimeoutForcedInSeconds>
+  <parallelTestsTimeoutInSeconds>${surefire.parallel.timeout}</parallelTestsTimeoutInSeconds>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <projectBuildDirectory default-value="${project.build.directory}"/>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <rerunFailingTestsCount default-value="0">${surefire.rerunFailingTestsCount}</rerunFailingTestsCount>
+  <reuseForks default-value="true">${reuseForks}</reuseForks>
+  <runOrder default-value="filesystem">${surefire.runOrder}</runOrder>
+  <shutdown default-value="testset">${surefire.shutdown}</shutdown>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipAfterFailureCount default-value="0">${surefire.skipAfterFailureCount}</skipAfterFailureCount>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <suiteXmlFiles>${surefire.suiteXmlFiles}</suiteXmlFiles>
+  <tempDir default-value="surefire">${tempDir}</tempDir>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <threadCountClasses default-value="0">${threadCountClasses}</threadCountClasses>
+  <threadCountMethods default-value="0">${threadCountMethods}</threadCountMethods>
+  <threadCountSuites default-value="0">${threadCountSuites}</threadCountSuites>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:3.0.2:jar (default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <finalName default-value="${project.build.finalName}"/>
+  <forceCreation default-value="false">${maven.jar.forceCreation}</forceCreation>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <skipIfEmpty default-value="false"/>
+  <useDefaultManifestFile default-value="false">${jar.useDefaultManifestFile}</useDefaultManifestFile>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=670093, ConflictMarker.markTime=409949, ConflictMarker.nodeCount=6, ConflictIdSorter.graphTime=413556, ConflictIdSorter.topsortTime=336229, ConflictIdSorter.conflictIdCount=5, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2599739, ConflictResolver.conflictItemCount=5, DefaultDependencyCollector.collectTime=18111513, DefaultDependencyCollector.transformTime=6439868}
+[DEBUG] com.qiding.push:qiding-push:jar:1.0-SNAPSHOT
+[DEBUG]    junit:junit:jar:4.11:test
+[DEBUG]       org.hamcrest:hamcrest-core:jar:1.3:test
+[DEBUG]    com.alibaba:fastjson:jar:1.2.68:compile
+[DEBUG]    org.projectlombok:lombok:jar:1.18.10:compile
+[DEBUG]    com.vivo:vPush-server-sdk:jar:1.0:system
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ qiding-push ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=109757, ConflictMarker.markTime=78682, ConflictMarker.nodeCount=14, ConflictIdSorter.graphTime=36563, ConflictIdSorter.topsortTime=16796, ConflictIdSorter.conflictIdCount=12, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=668942, ConflictResolver.conflictItemCount=14, DefaultDependencyCollector.collectTime=110227124, DefaultDependencyCollector.transformTime=985462}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:3.1.0:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]          org.codehaus.plexus:plexus-utils:jar:2.0.4:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.codehaus.plexus:plexus-component-annotations:jar:1.7.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile
+[DEBUG]       commons-io:commons-io:jar:2.5:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.1.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.1.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:3.1.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:3.1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.7.1
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.2.1
+[DEBUG]   Included: commons-io:commons-io:jar:2.5
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:3.1.0, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean' with basic configurator -->
+[DEBUG]   (f) directory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]   (f) reportDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire-reports/com.qiding.push.AppTest.txt
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire-reports/TEST-com.qiding.push.AppTest.xml
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire-reports
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/aaaaa.jar
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-archiver/pom.properties
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-archiver
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/compile/default-compile
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/compile
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin/testCompile
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status/maven-compiler-plugin
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/maven-status
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/archive-tmp
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/vivo.properties
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com/qiding/push/vivo/VivoConfig.class
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com/qiding/push/vivo/VivoPush.class
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com/qiding/push/vivo
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com/qiding/push/App.class
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com/qiding/push
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com/qiding
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/com
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire/surefirebooter737184649607951459.jar
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire/surefire_05637544999201512028tmp
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire/surefire9098831897605228674tmp
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes/com/qiding/push/AppTest.class
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes/com/qiding/push
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes/com/qiding
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes/com
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[INFO] Deleting file /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/singal-vivo-jar-with-dependencies.jar
+[INFO] Deleting directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[DEBUG] Skipping non-existing directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG] Skipping non-existing directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG] Skipping non-existing directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ qiding-push ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=227779, ConflictMarker.markTime=151558, ConflictMarker.nodeCount=68, ConflictIdSorter.graphTime=122833, ConflictIdSorter.topsortTime=28042, ConflictIdSorter.conflictIdCount=28, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2706701, ConflictResolver.conflictItemCount=67, DefaultDependencyCollector.collectTime=157100351, DefaultDependencyCollector.transformTime=3260855}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:3.0.2:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0:runtime
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-api:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-util:jar:1.7:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.6:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.24:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:3.1.1:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.0.0:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+[DEBUG]    commons-io:commons-io:jar:2.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.24:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.0.2
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.0.2
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:3.0.2
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:3.0.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.6
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.24
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:3.1.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.0.0
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: commons-io:commons-io:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.24
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:3.0.2:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.0.2, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:3.0.2:resources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.qiding.push:qiding-push:1.0-SNAPSHOT @ /Users/qiding/gitproject/qiding-middle-ware/qiding-push/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1a15b789
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, env.XPC_SERVICE_NAME=0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Mac OS X, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/classes, env.TMPDIR=/var/folders/rr/5_ws_mz1157d9m192t8vk3bc0000gn/T/, env.PWD=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_171-b11, env.GOPATH=/Users/qiding/gopath, env.ZK_HOME=/Users/qiding/systemtools/zookeeper/apache-zookeeper-3.5.6/bin, project.build.sourceEncoding=UTF-8, user.name=qiding, maven.build.version=Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T02:33:14+08:00), env.STORM_HOME=/Users/qiding/systemtools/apache-storm-2.1.0/bin, env.USER=qiding, env.SHELL=/bin/bash, env.__CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, env.PYTHON_HOME=/Library/Frameworks/Python.framework/Versions/3.7/bin, env.PATH=/Users/qiding/Library/Android/sdk/tools/bin:/Users/qiding/Library/Android/sdk/platform-tools:/Users/qiding/systemtools/hadoop-2.10.0/bin:/Users/qiding/systemtools/groovy-2.5.8/bin/:/Users/qiding/systemtools/apache-storm-2.1.0/bin:/Users/qiding/systemtools/maven/apache-maven-3.5.4/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home:/Users/qiding/systemtools/zookeeper/apache-zookeeper-3.5.6/bin:/Users/qiding/gopath/src/github.com/hyperledger/fabric/release/darwin-amd64/bin:/Users/qiding/systemtools/gradle-5.4.1/bin:/Users/qiding/systemtools/proto3/bin:/Users/qiding/systemtools/cassandra/apache-cassandra-3.11.4:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS, user.language=en, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib, classworlds.conf=/Users/qiding/systemtools/maven/apache-maven-3.5.4/bin/m2.conf, env.XPC_FLAGS=0x0, env.LC_CTYPE=en_US.UTF-8, java.version=1.8.0_171, user.timezone=, project.baseUri=file:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/, maven.build.timestamp=2020-05-15T09:44:13Z, sun.arch.data.model=64, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=1, file.separator=/, java.specification.name=Java Platform API Specification, maven.conf=/Users/qiding/systemtools/maven/apache-maven-3.5.4/conf, env.GROOVY_HOME=/Users/qiding/systemtools/groovy-2.5.8, java.class.version=52.0, user.country=CN, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre, env.ANDROID_HOME=/Users/qiding/Library/Android/sdk, java.vm.info=mixed mode, env.LOGNAME=qiding, os.version=10.15.4, maven.compiler.target=1.8, env.HADOOP_HOME=/Users/qiding/systemtools/hadoop-2.10.0, path.separator=:, java.vm.version=25.171-b11, env.GOROOT=/usr/local/go, env.JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, env.TERM=xterm-256color, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, env.protoc=/Users/qiding/systemtools/proto3/bin, user.home=/Users/qiding, env.OLDPWD=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, java.specification.vendor=Oracle Corporation, library.jansi.path=/Users/qiding/systemtools/maven/apache-maven-3.5.4/lib/jansi-native, java.library.path=/Users/qiding/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS= clean package --settings=/Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/settings-home.xml -X, java.vm.vendor=Oracle Corporation, gopherProxySet=false, env.CASSANDRA_HOME=/Users/qiding/systemtools/cassandra/apache-cassandra-3.11.4, maven.home=/Users/qiding/systemtools/maven/apache-maven-3.5.4, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher clean package --settings=/Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/settings-home.xml -X, java.class.path=/Users/qiding/systemtools/maven/apache-maven-3.5.4/boot/plexus-classworlds-2.5.2.jar, maven.version=3.5.4, java.vm.specification.name=Java Virtual Machine Specification, env.JAVA_MAIN_CLASS_4367=org.codehaus.plexus.classworlds.launcher.Launcher, java.vm.specification.version=1.8, sun.os.patch.level=unknown, sun.cpu.endian=little, env.HOME=/Users/qiding, env.gradle=/Users/qiding/systemtools/gradle-5.4.1/bin, java.io.tmpdir=/var/folders/rr/5_ws_mz1157d9m192t8vk3bc0000gn/T/, maven.multiModuleProjectDirectory=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.pGfyRZqCUH/Listeners, env.darwin=/Users/qiding/gopath/src/github.com/hyperledger/fabric/release/darwin-amd64/bin, maven.compiler.source=1.8, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, os.arch=x86_64, java.ext.dirs=/Users/qiding/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, user.dir=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, env.MAVEN_HOME=/Users/qiding/systemtools/maven/apache-maven-3.5.4, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.TERMINAL_EMULATOR=JetBrains-JediTerm, env.JETBRAINS_LICENSE_SERVER=http://fls.jetbrains-agent.com, file.encoding=UTF-8, java.specification.version=1.8, env.MAVEN_PROJECTBASEDIR=/Users/qiding/gitproject/qiding-middle-ware/qiding-push}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 1 resource
+[DEBUG] Copying file vivo.properties
+[DEBUG] file vivo.properties has a filtered file extension
+[DEBUG] copy /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/resources/vivo.properties to /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes/vivo.properties
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ qiding-push ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=365798, ConflictMarker.markTime=226027, ConflictMarker.nodeCount=118, ConflictIdSorter.graphTime=152989, ConflictIdSorter.topsortTime=57426, ConflictIdSorter.conflictIdCount=45, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2111860, ConflictResolver.conflictItemCount=72, DefaultDependencyCollector.collectTime=126605243, DefaultDependencyCollector.transformTime=2937121}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.8.0:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:2.0.4:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0:runtime
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-api:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-util:jar:1.7:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.7.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile
+[DEBUG]       commons-io:commons-io:jar:2.5:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-java:jar:0.9.10:compile
+[DEBUG]       org.ow2.asm:asm:jar:6.2:compile
+[DEBUG]       com.thoughtworks.qdox:qdox:jar:2.0-M9:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.8.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.8.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.8.4:runtime
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.8.0
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.8.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.8.0
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.8.0
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.4
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.7.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.2.1
+[DEBUG]   Included: commons-io:commons-io:jar:2.5
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:0.9.10
+[DEBUG]   Included: org.ow2.asm:asm:jar:6.2
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.0-M9
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.8.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.8.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.8.4
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.8.0, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile' with basic configurator -->
+[DEBUG]   (f) basedir = /Users/qiding/gitproject/qiding-middle-ware/qiding-push
+[DEBUG]   (f) buildDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[DEBUG]   (f) compilePath = [/Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar, /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar]
+[DEBUG]   (f) compileSourceRoots = [/Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: com.qiding.push:qiding-push:1.0-SNAPSHOT @ /Users/qiding/gitproject/qiding-middle-ware/qiding-push/pom.xml
+[DEBUG]   (f) projectArtifact = com.qiding.push:qiding-push:jar:1.0-SNAPSHOT
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1a15b789
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 8
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations to compile source roots:
+  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java
+[DEBUG] New compile source roots:
+  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java
+  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[DEBUG] Stale source detected: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java/com/qiding/push/vivo/VivoConfig.java
+[DEBUG] Stale source detected: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java/com/qiding/push/App.java
+[DEBUG] Stale source detected: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java/com/qiding/push/vivo/VivoPush.java
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar
+[DEBUG]  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar
+[DEBUG] Source roots:
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations
+[DEBUG] Command line options:
+[DEBUG] -d /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes -classpath /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes:/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar:/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar: -sourcepath /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/java:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations: -s /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-sources/annotations -g -nowarn -target 8 -source 8 -encoding UTF-8
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 3 source files to /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ qiding-push ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:3.0.2:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:3.0.2, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:3.0.2:testResources' with basic configurator -->
+[DEBUG]   (f) addDefaultExcludes = true
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (f) fileNameFiltering = false
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.qiding.push:qiding-push:1.0-SNAPSHOT @ /Users/qiding/gitproject/qiding-middle-ware/qiding-push/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1a15b789
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, env.XPC_SERVICE_NAME=0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.name=Mac OS X, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/classes, env.TMPDIR=/var/folders/rr/5_ws_mz1157d9m192t8vk3bc0000gn/T/, env.PWD=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_171-b11, env.GOPATH=/Users/qiding/gopath, env.ZK_HOME=/Users/qiding/systemtools/zookeeper/apache-zookeeper-3.5.6/bin, project.build.sourceEncoding=UTF-8, user.name=qiding, maven.build.version=Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T02:33:14+08:00), env.STORM_HOME=/Users/qiding/systemtools/apache-storm-2.1.0/bin, env.USER=qiding, env.SHELL=/bin/bash, env.__CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, env.PYTHON_HOME=/Library/Frameworks/Python.framework/Versions/3.7/bin, env.PATH=/Users/qiding/Library/Android/sdk/tools/bin:/Users/qiding/Library/Android/sdk/platform-tools:/Users/qiding/systemtools/hadoop-2.10.0/bin:/Users/qiding/systemtools/groovy-2.5.8/bin/:/Users/qiding/systemtools/apache-storm-2.1.0/bin:/Users/qiding/systemtools/maven/apache-maven-3.5.4/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home:/Users/qiding/systemtools/zookeeper/apache-zookeeper-3.5.6/bin:/Users/qiding/gopath/src/github.com/hyperledger/fabric/release/darwin-amd64/bin:/Users/qiding/systemtools/gradle-5.4.1/bin:/Users/qiding/systemtools/proto3/bin:/Users/qiding/systemtools/cassandra/apache-cassandra-3.11.4:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS, user.language=en, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib, classworlds.conf=/Users/qiding/systemtools/maven/apache-maven-3.5.4/bin/m2.conf, env.XPC_FLAGS=0x0, env.LC_CTYPE=en_US.UTF-8, java.version=1.8.0_171, user.timezone=, project.baseUri=file:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/, maven.build.timestamp=2020-05-15T09:44:15Z, sun.arch.data.model=64, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=1, file.separator=/, java.specification.name=Java Platform API Specification, maven.conf=/Users/qiding/systemtools/maven/apache-maven-3.5.4/conf, env.GROOVY_HOME=/Users/qiding/systemtools/groovy-2.5.8, java.class.version=52.0, user.country=CN, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre, env.ANDROID_HOME=/Users/qiding/Library/Android/sdk, java.vm.info=mixed mode, env.LOGNAME=qiding, os.version=10.15.4, maven.compiler.target=1.8, env.HADOOP_HOME=/Users/qiding/systemtools/hadoop-2.10.0, path.separator=:, java.vm.version=25.171-b11, env.GOROOT=/usr/local/go, env.JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, env.TERM=xterm-256color, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, env.protoc=/Users/qiding/systemtools/proto3/bin, user.home=/Users/qiding, env.OLDPWD=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, java.specification.vendor=Oracle Corporation, library.jansi.path=/Users/qiding/systemtools/maven/apache-maven-3.5.4/lib/jansi-native, java.library.path=/Users/qiding/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS= clean package --settings=/Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/settings-home.xml -X, java.vm.vendor=Oracle Corporation, gopherProxySet=false, env.CASSANDRA_HOME=/Users/qiding/systemtools/cassandra/apache-cassandra-3.11.4, maven.home=/Users/qiding/systemtools/maven/apache-maven-3.5.4, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher clean package --settings=/Users/qiding/systemtools/maven/apache-maven-3.5.4/conf/settings-home.xml -X, java.class.path=/Users/qiding/systemtools/maven/apache-maven-3.5.4/boot/plexus-classworlds-2.5.2.jar, maven.version=3.5.4, java.vm.specification.name=Java Virtual Machine Specification, env.JAVA_MAIN_CLASS_4367=org.codehaus.plexus.classworlds.launcher.Launcher, java.vm.specification.version=1.8, sun.os.patch.level=unknown, sun.cpu.endian=little, env.HOME=/Users/qiding, env.gradle=/Users/qiding/systemtools/gradle-5.4.1/bin, java.io.tmpdir=/var/folders/rr/5_ws_mz1157d9m192t8vk3bc0000gn/T/, maven.multiModuleProjectDirectory=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.pGfyRZqCUH/Listeners, env.darwin=/Users/qiding/gopath/src/github.com/hyperledger/fabric/release/darwin-amd64/bin, maven.compiler.source=1.8, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, os.arch=x86_64, java.ext.dirs=/Users/qiding/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, user.dir=/Users/qiding/gitproject/qiding-middle-ware/qiding-push, env.MAVEN_HOME=/Users/qiding/systemtools/maven/apache-maven-3.5.4, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.TERMINAL_EMULATOR=JetBrains-JediTerm, env.JETBRAINS_LICENSE_SERVER=http://fls.jetbrains-agent.com, file.encoding=UTF-8, java.specification.version=1.8, env.MAVEN_PROJECTBASEDIR=/Users/qiding/gitproject/qiding-middle-ware/qiding-push}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ qiding-push ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.8.0, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = /Users/qiding/gitproject/qiding-middle-ware/qiding-push
+[DEBUG]   (f) buildDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[DEBUG]   (f) compilePath = [/Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar, /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar]
+[DEBUG]   (f) compileSourceRoots = [/Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) failOnWarning = false
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG]   (f) parameters = false
+[DEBUG]   (f) project = MavenProject: com.qiding.push:qiding-push:1.0-SNAPSHOT @ /Users/qiding/gitproject/qiding-middle-ware/qiding-push/pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1a15b789
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (s) target = 8
+[DEBUG]   (f) testPath = [/Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes, /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/junit/junit/4.11/junit-4.11.jar, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar, /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar, /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar]
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Adding /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations to test-compile source roots:
+  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java
+[DEBUG] New test-compile source roots:
+  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java
+  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[DEBUG] Stale source detected: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java/com/qiding/push/AppTest.java
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/junit/junit/4.11/junit-4.11.jar
+[DEBUG]  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[DEBUG]  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar
+[DEBUG]  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar
+[DEBUG] Source roots:
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java
+[DEBUG]  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations
+[DEBUG] Command line options:
+[DEBUG] -d /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes -classpath /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes:/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/junit/junit/4.11/junit-4.11.jar:/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar:/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar: -sourcepath /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java:/Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations: -s /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/generated-test-sources/test-annotations -g -nowarn -target 8 -source 8 -encoding UTF-8
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 1 source file to /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ qiding-push ---
+[DEBUG] Using mirror alimaven (http://maven.aliyun.com/nexus/content/groups/public/) for central (http://repo1.maven.org/maven2).
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=359913, ConflictMarker.markTime=129508, ConflictMarker.nodeCount=114, ConflictIdSorter.graphTime=155180, ConflictIdSorter.topsortTime=37284, ConflictIdSorter.conflictIdCount=37, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2231535, ConflictResolver.conflictItemCount=79, DefaultDependencyCollector.collectTime=177557262, DefaultDependencyCollector.transformTime=2943828}
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:2.22.1:
+[DEBUG]    org.apache.maven.surefire:maven-surefire-common:jar:2.22.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+[DEBUG]       org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5.2:compile
+[DEBUG]       org.apache.maven.surefire:surefire-api:jar:2.22.1:compile
+[DEBUG]          org.apache.maven.surefire:surefire-logger-api:jar:2.22.1:compile
+[DEBUG]       org.apache.maven.surefire:surefire-booter:jar:2.22.1:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.2.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-utils:jar:1.5.15:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.2.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]             junit:junit:jar:4.12:compile
+[DEBUG]                org.hamcrest:hamcrest-core:jar:1.3:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-settings:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-profile:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-artifact-manager:jar:2.2.1:compile
+[DEBUG]             backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.2.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.11:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-core:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-plugin-parameter-documenter:jar:2.2.1:compile
+[DEBUG]          org.slf4j:slf4j-jdk14:jar:1.5.6:runtime
+[DEBUG]             org.slf4j:slf4j-api:jar:1.5.6:runtime
+[DEBUG]          org.slf4j:jcl-over-slf4j:jar:1.5.6:runtime
+[DEBUG]          org.apache.maven.reporting:maven-reporting-api:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-monitor:jar:2.2.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1:compile
+[DEBUG]          org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]             org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]       org.apache.maven:maven-toolchain:jar:2.2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-java:jar:0.9.10:compile
+[DEBUG]          org.ow2.asm:asm:jar:6.2:compile
+[DEBUG]          com.thoughtworks.qdox:qdox:jar:2.0-M8:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.22.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.22.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.22.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-surefire-plugin:jar:2.22.1
+[DEBUG]   Included: org.apache.maven.surefire:maven-surefire-common:jar:2.22.1
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5.2
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:2.22.1
+[DEBUG]   Included: org.apache.maven.surefire:surefire-logger-api:jar:2.22.1
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:2.22.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.15
+[DEBUG]   Included: junit:junit:jar:4.12
+[DEBUG]   Included: org.hamcrest:hamcrest-core:jar:1.3
+[DEBUG]   Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.11
+[DEBUG]   Included: org.slf4j:slf4j-jdk14:jar:1.5.6
+[DEBUG]   Included: org.slf4j:jcl-over-slf4j:jar:1.5.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:3.0
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-java:jar:0.9.10
+[DEBUG]   Included: org.ow2.asm:asm:jar:6.2
+[DEBUG]   Included: com.thoughtworks.qdox:qdox:jar:2.0-M8
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:2.22.1, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test' with basic configurator -->
+[DEBUG]   (s) additionalClasspathElements = []
+[DEBUG]   (s) basedir = /Users/qiding/gitproject/qiding-middle-ware/qiding-push
+[DEBUG]   (s) childDelegation = false
+[DEBUG]   (s) classesDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]   (s) classpathDependencyExcludes = []
+[DEBUG]   (s) dependenciesToScan = []
+[DEBUG]   (s) disableXmlReport = false
+[DEBUG]   (s) enableAssertions = true
+[DEBUG]   (f) forkCount = 1
+[DEBUG]   (s) forkMode = once
+[DEBUG]   (s) forkedProcessExitTimeoutInSeconds = 30
+[DEBUG]   (s) junitArtifactName = junit:junit
+[DEBUG]   (s) junitPlatformArtifactName = org.junit.platform:junit-platform-engine
+[DEBUG]   (s) localRepository =       id: local
+      url: file:///Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[DEBUG]   (f) parallelMavenExecution = false
+[DEBUG]   (s) parallelOptimized = true
+[DEBUG]   (s) perCoreThreadCount = true
+[DEBUG]   (s) pluginArtifactMap = {org.apache.maven.plugins:maven-surefire-plugin=org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.22.1:, org.apache.maven.surefire:maven-surefire-common=org.apache.maven.surefire:maven-surefire-common:jar:2.22.1:compile, org.apache.maven:maven-plugin-api=org.apache.maven:maven-plugin-api:jar:2.2.1:compile, org.apache.maven.plugin-tools:maven-plugin-annotations=org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.5.2:compile, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:2.22.1:compile, org.apache.maven.surefire:surefire-logger-api=org.apache.maven.surefire:surefire-logger-api:jar:2.22.1:compile, org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:2.22.1:compile, org.apache.maven:maven-artifact=org.apache.maven:maven-artifact:jar:2.2.1:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:1.5.15:compile, org.apache.maven:maven-plugin-descriptor=org.apache.maven:maven-plugin-descriptor:jar:2.2.1:compile, org.codehaus.plexus:plexus-container-default=org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile, junit:junit=junit:junit:jar:4.12:compile, org.hamcrest:hamcrest-core=org.hamcrest:hamcrest-core:jar:1.3:compile, org.apache.maven:maven-project=org.apache.maven:maven-project:jar:2.2.1:compile, org.apache.maven:maven-settings=org.apache.maven:maven-settings:jar:2.2.1:compile, org.apache.maven:maven-profile=org.apache.maven:maven-profile:jar:2.2.1:compile, org.apache.maven:maven-artifact-manager=org.apache.maven:maven-artifact-manager:jar:2.2.1:compile, backport-util-concurrent:backport-util-concurrent=backport-util-concurrent:backport-util-concurrent:jar:3.1:compile, org.apache.maven:maven-plugin-registry=org.apache.maven:maven-plugin-registry:jar:2.2.1:compile, org.codehaus.plexus:plexus-interpolation=org.codehaus.plexus:plexus-interpolation:jar:1.11:compile, org.apache.maven:maven-model=org.apache.maven:maven-model:jar:2.2.1:compile, org.apache.maven:maven-core=org.apache.maven:maven-core:jar:2.2.1:compile, org.apache.maven:maven-plugin-parameter-documenter=org.apache.maven:maven-plugin-parameter-documenter:jar:2.2.1:compile, org.slf4j:slf4j-jdk14=org.slf4j:slf4j-jdk14:jar:1.5.6:runtime, org.slf4j:slf4j-api=org.slf4j:slf4j-api:jar:1.5.6:runtime, org.slf4j:jcl-over-slf4j=org.slf4j:jcl-over-slf4j:jar:1.5.6:runtime, org.apache.maven.reporting:maven-reporting-api=org.apache.maven.reporting:maven-reporting-api:jar:3.0:compile, org.apache.maven:maven-repository-metadata=org.apache.maven:maven-repository-metadata:jar:2.2.1:compile, org.apache.maven:maven-error-diagnostics=org.apache.maven:maven-error-diagnostics:jar:2.2.1:compile, org.apache.maven:maven-monitor=org.apache.maven:maven-monitor:jar:2.2.1:compile, classworlds:classworlds=classworlds:classworlds:jar:1.1:compile, org.sonatype.plexus:plexus-sec-dispatcher=org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile, org.sonatype.plexus:plexus-cipher=org.sonatype.plexus:plexus-cipher:jar:1.4:compile, org.apache.maven:maven-toolchain=org.apache.maven:maven-toolchain:jar:2.2.1:compile, org.codehaus.plexus:plexus-java=org.codehaus.plexus:plexus-java:jar:0.9.10:compile, org.ow2.asm:asm=org.ow2.asm:asm:jar:6.2:compile, com.thoughtworks.qdox:qdox=com.thoughtworks.qdox:qdox:jar:2.0-M8:compile}
+[DEBUG]   (f) pluginDescriptor = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.HelpMojo', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.22.1:help'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.SurefirePlugin', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test'
+---
+[DEBUG]   (s) printSummary = true
+[DEBUG]   (s) projectArtifactMap = {junit:junit=junit:junit:jar:4.11:test, org.hamcrest:hamcrest-core=org.hamcrest:hamcrest-core:jar:1.3:test, com.alibaba:fastjson=com.alibaba:fastjson:jar:1.2.68:compile, org.projectlombok:lombok=org.projectlombok:lombok:jar:1.18.10:compile, com.vivo:vPush-server-sdk=com.vivo:vPush-server-sdk:jar:1.0:system}
+[DEBUG]   (s) projectBuildDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[DEBUG]   (s) redirectTestOutputToFile = false
+[DEBUG]   (s) remoteRepositories = [      id: alimaven
+      url: http://maven.aliyun.com/nexus/content/groups/public/
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => never]
+]
+[DEBUG]   (s) reportFormat = brief
+[DEBUG]   (s) reportsDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire-reports
+[DEBUG]   (f) rerunFailingTestsCount = 0
+[DEBUG]   (f) reuseForks = true
+[DEBUG]   (s) runOrder = filesystem
+[DEBUG]   (f) shutdown = testset
+[DEBUG]   (s) skip = false
+[DEBUG]   (f) skipAfterFailureCount = 0
+[DEBUG]   (s) skipTests = false
+[DEBUG]   (s) suiteXmlFiles = []
+[DEBUG]   (s) tempDir = surefire
+[DEBUG]   (s) testClassesDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes
+[DEBUG]   (s) testFailureIgnore = false
+[DEBUG]   (s) testNGArtifactName = org.testng:testng
+[DEBUG]   (s) testSourceDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/test/java
+[DEBUG]   (s) threadCountClasses = 0
+[DEBUG]   (s) threadCountMethods = 0
+[DEBUG]   (s) threadCountSuites = 0
+[DEBUG]   (s) trimStackTrace = true
+[DEBUG]   (s) useFile = true
+[DEBUG]   (s) useManifestOnlyJar = true
+[DEBUG]   (s) useSystemClassLoader = true
+[DEBUG]   (s) useUnlimitedThreads = false
+[DEBUG]   (s) workingDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push
+[DEBUG]   (s) project = MavenProject: com.qiding.push:qiding-push:1.0-SNAPSHOT @ /Users/qiding/gitproject/qiding-middle-ware/qiding-push/pom.xml
+[DEBUG]   (s) session = org.apache.maven.execution.MavenSession@1a15b789
+[DEBUG] -- end configuration --
+[DEBUG] Surefire report directory: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire-reports
+[DEBUG] Setting system property [user.dir]=[/Users/qiding/gitproject/qiding-middle-ware/qiding-push]
+[DEBUG] Setting system property [localRepository]=[/Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib]
+[DEBUG] Setting system property [basedir]=[/Users/qiding/gitproject/qiding-middle-ware/qiding-push]
+[DEBUG] dummy:dummy:jar:1.0 (selected for null)
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.22.1:compile (selected for compile)
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.22.1:compile (selected for compile)
+[DEBUG]       org.apache.maven.surefire:surefire-logger-api:jar:2.22.1:compile (selected for compile)
+[DEBUG] Adding to surefire booter test classpath: /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-booter/2.22.1/surefire-booter-2.22.1.jar Scope: compile
+[DEBUG] Adding to surefire booter test classpath: /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-api/2.22.1/surefire-api-2.22.1.jar Scope: compile
+[DEBUG] Adding to surefire booter test classpath: /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-logger-api/2.22.1/surefire-logger-api-2.22.1.jar Scope: compile
+[DEBUG] Using JVM: /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/bin/java with Java version 1.8
+[DEBUG] dummy:dummy:jar:1.0 (selected for null)
+[DEBUG]   org.apache.maven.surefire:surefire-junit4:jar:2.22.1:test (selected for test)
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.22.1:test (selected for test)
+[DEBUG]       org.apache.maven.surefire:surefire-logger-api:jar:2.22.1:test (selected for test)
+[DEBUG] Adding to surefire test classpath: /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar Scope: test
+[DEBUG] Adding to surefire test classpath: /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-api/2.22.1/surefire-api-2.22.1.jar Scope: test
+[DEBUG] Adding to surefire test classpath: /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-logger-api/2.22.1/surefire-logger-api-2.22.1.jar Scope: test
+[DEBUG] test classpath:  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/junit/junit/4.11/junit-4.11.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar
+[DEBUG] provider classpath:  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-api/2.22.1/surefire-api-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-logger-api/2.22.1/surefire-logger-api-2.22.1.jar
+[DEBUG] test(compact) classpath:  test-classes  classes  junit-4.11.jar  hamcrest-core-1.3.jar  fastjson-1.2.68.jar  lombok-1.18.10.jar  vPush-server-sdk-1.0.jar
+[DEBUG] provider(compact) classpath:  surefire-junit4-2.22.1.jar  surefire-api-2.22.1.jar  surefire-logger-api-2.22.1.jar
+[DEBUG] in-process classpath:  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-api/2.22.1/surefire-api-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-logger-api/2.22.1/surefire-logger-api-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/maven-surefire-common/2.22.1/maven-surefire-common-2.22.1.jar
+[DEBUG] in-process(compact) classpath:  surefire-junit4-2.22.1.jar  surefire-api-2.22.1.jar  surefire-logger-api-2.22.1.jar  maven-surefire-common-2.22.1.jar
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[DEBUG] Determined Maven Process ID 4367
+[DEBUG] boot classpath:  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-booter/2.22.1/surefire-booter-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-api/2.22.1/surefire-api-2.22.1.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-logger-api/2.22.1/surefire-logger-api-2.22.1.jar  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/test-classes  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/junit/junit/4.11/junit-4.11.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar  /Users/qiding/gitproject/qiding-middle-ware/qiding-push/src/main/libs/vPush-server-sdk-1.0.jar  /Users/qiding/systemtools/maven/apache-maven-3.5.4/jarlib/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar
+[DEBUG] boot(compact) classpath:  surefire-booter-2.22.1.jar  surefire-api-2.22.1.jar  surefire-logger-api-2.22.1.jar  test-classes  classes  junit-4.11.jar  hamcrest-core-1.3.jar  fastjson-1.2.68.jar  lombok-1.18.10.jar  vPush-server-sdk-1.0.jar  surefire-junit4-2.22.1.jar
+[DEBUG] Forking command line: /bin/sh -c cd /Users/qiding/gitproject/qiding-middle-ware/qiding-push && /Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/bin/java -jar /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire/surefirebooter3513020977648257116.jar /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/surefire 2020-05-15T17-44-17_608-jvmRun1 surefire3015582472778966372tmp surefire_01275912509491014983tmp
+[INFO] Running com.qiding.push.AppTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in com.qiding.push.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ qiding-push ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=256122, ConflictMarker.markTime=66669, ConflictMarker.nodeCount=82, ConflictIdSorter.graphTime=131317, ConflictIdSorter.topsortTime=37782, ConflictIdSorter.conflictIdCount=31, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1081355, ConflictResolver.conflictItemCount=75, DefaultDependencyCollector.collectTime=53093718, DefaultDependencyCollector.transformTime=1599622}
+[DEBUG] org.apache.maven.plugins:maven-jar-plugin:jar:3.0.2:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0:runtime
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-api:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-util:jar:1.7:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.6:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:3.1.1:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.0.1:compile
+[DEBUG]       commons-io:commons-io:jar:2.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:3.4:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.7.1:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.11:compile
+[DEBUG]       org.iq80.snappy:snappy:jar:0.4:compile
+[DEBUG]       org.tukaani:xz:jar:1.5:runtime
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.24:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-jar-plugin:3.0.2
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-jar-plugin:3.0.2
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-jar-plugin:3.0.2
+[DEBUG]   Included: org.apache.maven.plugins:maven-jar-plugin:jar:3.0.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.6
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:3.1.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.0.1
+[DEBUG]   Included: commons-io:commons-io:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:3.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.7.1
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.11
+[DEBUG]   Included: org.iq80.snappy:snappy:jar:0.4
+[DEBUG]   Included: org.tukaani:xz:jar:1.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.24
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-jar-plugin:3.0.2:jar from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-jar-plugin:3.0.2, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-jar-plugin:3.0.2:jar' with basic configurator -->
+[DEBUG]   (f) classesDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/classes
+[DEBUG]   (f) finalName = 
+[DEBUG]   (f) forceCreation = false
+[DEBUG]   (f) outputDirectory = /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target
+[DEBUG]   (f) project = MavenProject: com.qiding.push:qiding-push:1.0-SNAPSHOT @ /Users/qiding/gitproject/qiding-middle-ware/qiding-push/pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1a15b789
+[DEBUG]   (f) skipIfEmpty = false
+[DEBUG]   (f) useDefaultManifestFile = false
+[DEBUG] -- end configuration --
+[DEBUG] isUp2date: false (Destination /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/.jar not found.)
+[INFO] Building jar: /Users/qiding/gitproject/qiding-middle-ware/qiding-push/target/.jar
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory com/
+[DEBUG] adding directory com/qiding/
+[DEBUG] adding directory com/qiding/push/
+[DEBUG] adding directory com/qiding/push/vivo/
+[DEBUG] adding entry com/qiding/push/App.class
+[DEBUG] adding entry com/qiding/push/vivo/VivoPush.class
+[DEBUG] adding entry com/qiding/push/vivo/VivoConfig.class
+[DEBUG] adding entry vivo.properties
+[DEBUG] adding directory META-INF/maven/
+[DEBUG] adding directory META-INF/maven/com.qiding.push/
+[DEBUG] adding directory META-INF/maven/com.qiding.push/qiding-push/
+[DEBUG] adding entry META-INF/maven/com.qiding.push/qiding-push/pom.xml
+[DEBUG] adding entry META-INF/maven/com.qiding.push/qiding-push/pom.properties
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.388 s
+[INFO] Finished at: 2020-05-15T17:44:20+08:00
+[INFO] ------------------------------------------------------------------------
+[WARNING] The requested profile "central" could not be activated because it does not exist.

@@ -1,4 +1,4 @@
-package com.qiding.demo;
+package com.qiding.fastdfs;
 
 /**
  * Hello world!

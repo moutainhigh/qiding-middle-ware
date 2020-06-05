@@ -1,10 +1,7 @@
-package com.qiding.demo.scenes.lbs;
+package com.qiding.test.scenes.lbs;
 
-import com.google.common.collect.ImmutableMultimap;
 import org.apache.curator.framework.recipes.cache.NodeCache;
 
-import java.io.File;
-import java.util.Currency;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

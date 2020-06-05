@@ -14,7 +14,11 @@ public class ScrollSearch {
 
 
 
+<<<<<<< HEAD
 //		client.prepareSearch("index")
+=======
+		client.prepareSearch("index");
+>>>>>>> 61c6944fab5799998ec06a5e332f3348ecc28024
 	}
 
 	public void scrollSearch(String scrollId,Long timeout){

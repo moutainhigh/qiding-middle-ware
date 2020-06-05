@@ -1,4 +1,4 @@
-package com.qiding.test.api;
+package com.qiding.mongodb.api;
 
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;

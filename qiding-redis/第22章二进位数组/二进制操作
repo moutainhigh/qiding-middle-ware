@@ -1,0 +1,14 @@
+二进制命令
+    SETBIT GETBIT BITCOUNT BITOP
+
+SETBIT
+    命令，包含2部分，第一个偏移量，第二个二进制值
+    SETBIT <key> <offset> <data>
+    setbit  a  3 1  0100
+    setbit  a  0 1  0101
+GETBIT 偏移量的值
+    GETBIT a 3 ==> 1
+BITOP 对key的值，执行二进制运算
+   AND
+   OR
+   XOR

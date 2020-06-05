@@ -78,12 +78,12 @@
 					<configuration>
 						<archive>
 							<manifestEntries>
-								<premain-class>com.qiding.test.AgentMain</premain-class>
+								<premain-class>com.qiding.agenet.AgentMain</premain-class>
 								<can-redefine-classes>true</can-redefine-classes>
 								<can-retransform-classes>true</can-retransform-classes>
 							</manifestEntries>
 							<manifest>
-								<mainClass>com.qiding.test.AgentApp</mainClass>
+								<mainClass>com.qiding.agenet.AgentApp</mainClass>
 							</manifest>
 						</archive>
 						<descriptorRefs>

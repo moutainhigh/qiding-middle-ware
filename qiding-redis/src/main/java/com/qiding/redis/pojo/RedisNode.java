@@ -1,4 +1,4 @@
-package com.qiding.test.pojo;
+package com.qiding.redis.pojo;
 
 public class RedisNode {
     private String host;

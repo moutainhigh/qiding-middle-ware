@@ -1,4 +1,4 @@
-package com.qiding.demo;
+package com.qiding.jmx;
 
 public class Hello implements HelloMBean {
     private String name;

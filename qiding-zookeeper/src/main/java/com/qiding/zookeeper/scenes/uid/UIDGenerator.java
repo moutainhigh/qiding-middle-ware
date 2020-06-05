@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.uid;
+package com.qiding.test.scenes.uid;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;

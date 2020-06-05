@@ -1,7 +1,7 @@
-package com.qiding.test.impl;
+package com.qiding.redis.impl;
 
-import com.qiding.test.AbstractRedisService;
-import com.qiding.test.pojo.RedisNode;
+import com.qiding.redis.AbstractRedisService;
+import com.qiding.redis.pojo.RedisNode;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisSentinelPool;
 import redis.clients.jedis.Protocol;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class SentinelRedis  extends AbstractRedisService {
     private JedisSentinelPool pool;
     private String masterName;
-    public SentinelRedis(String masterName,RedisNode[] redisNodes,String password) {
+    public SentinelRedis(String masterName, RedisNode[] redisNodes, String password) {
         super(redisNodes,password);
         this.masterName=masterName;
     }

@@ -1,7 +1,7 @@
-package com.qiding.demo.roles;
+package com.qiding.test.roles;
 
-import com.qiding.demo.roles.param.ProposeRequest;
-import com.qiding.demo.roles.param.ProposeResponse;
+import com.qiding.test.roles.param.ProposeRequest;
+import com.qiding.test.roles.param.ProposeResponse;
 
 public interface Acceptor {
     /**

@@ -1,10 +1,10 @@
-package com.qiding.demo.roles.proposer;
+package com.qiding.test.roles.proposer;
 
 
-import com.qiding.demo.roles.Acceptor;
-import com.qiding.demo.roles.Proposer;
-import com.qiding.demo.roles.param.ProposeRequest;
-import com.qiding.demo.roles.param.ProposeResponse;
+import com.qiding.test.roles.Acceptor;
+import com.qiding.test.roles.Proposer;
+import com.qiding.test.roles.param.ProposeRequest;
+import com.qiding.test.roles.param.ProposeResponse;
 
 import java.util.List;
 

@@ -1,0 +1,39 @@
+1.数据结构
+   intset
+   hashtable
+
+  转化：intset -> hashtable
+
+  1。集合元素都是int
+  2。集合元素不超过512 （set-max-intset-entries）
+
+
+  命令
+    SADD 添加元素
+    SCARD 获取元素的数量
+
+    SDIFF 获取不同的元素 , 当前集合与另外一个集合的不一样的值
+    SDIFFSTORE 获取不同的元素，然后存储到指定位置
+
+    SINTER 获取相同的元素
+    SINTERSTORE 获取相同的元素，并且存储
+
+    SISMEMBER 是否是一个集合的值
+    SMEMBES 返回集合所有的值
+
+    SMOVE 把元素移动到其他集合
+
+    SPOP 删除并且获取集合的元素
+
+    SRANDMEMBER 随机获取元素
+
+    SREM 删除元素
+
+    SUNION，SUNIONSTORE 合并集合
+
+    SSCAN 集合游标返回列表
+
+
+
+
+

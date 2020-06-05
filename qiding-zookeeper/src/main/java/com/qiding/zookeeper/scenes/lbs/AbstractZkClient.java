@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.lbs;
+package com.qiding.test.scenes.lbs;
 
 import com.google.gson.Gson;
 import org.apache.curator.framework.CuratorFramework;

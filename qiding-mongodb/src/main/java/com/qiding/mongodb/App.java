@@ -1,12 +1,11 @@
-package com.qiding.test;
+package com.qiding.mongodb;
 
 import com.mongodb.ServerAddress;
 import com.mongodb.client.*;
-import com.qiding.test.api.IConnection;
-import com.qiding.test.impl.MongoConnection;
+import com.qiding.mongodb.api.IConnection;
+import com.qiding.mongodb.impl.MongoConnection;
 import org.bson.Document;
 
-import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 /**

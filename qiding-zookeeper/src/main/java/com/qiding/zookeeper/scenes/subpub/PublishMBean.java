@@ -1,8 +1,4 @@
-package com.qiding.demo.scenes.subpub;
-
-import java.lang.reflect.InvocationTargetException;
-import java.util.List;
-import java.util.Properties;
+package com.qiding.test.scenes.subpub;
 
 public interface PublishMBean {
      void publish(String key,String value) throws Exception;

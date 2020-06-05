@@ -1,8 +1,7 @@
-package com.qiding.test;
+package com.qiding.redis;
 
-import com.qiding.test.api.IRedis;
-import com.qiding.test.pojo.RedisNode;
-import redis.clients.jedis.Jedis;
+import com.qiding.redis.pojo.RedisNode;
+import com.qiding.redis.api.IRedis;
 import redis.clients.jedis.JedisCluster;
 import redis.clients.jedis.JedisPoolConfig;
 

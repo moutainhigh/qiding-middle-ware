@@ -1,6 +1,4 @@
-package com.qiding.test.socket;
-
-import sun.nio.ch.IOUtil;
+package com.qiding.state.socket;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

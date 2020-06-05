@@ -1,4 +1,4 @@
-package com.qiding.demo.scenes.coordinator.heat;
+package com.qiding.test.scenes.coordinator.heat;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.listen.StandardListenerManager;
