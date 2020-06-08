@@ -82,6 +82,14 @@ select 切换db
         内存不友好
 
 
+  RDB  save/bsave 产生的rdb文件不包含过期键
+
+  AOF 删除的数据，会发送一个del指令到aof文件的末尾
+
+  数据库通知
+
+
+
 
 
 

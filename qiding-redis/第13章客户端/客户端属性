@@ -1,0 +1,41 @@
+id=6 addr=127.0.0.1:55139 fd=10 name= age=19 idle=16 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=0 qbuf-free=0 obl=0 oll=0 omem=0 events=r cmd=get
+1.客户端属性
+ fd 记录客户端套接字描述符
+ name 通过client set name 设置
+ age 连接时间
+ idle 空闲时间
+ flages记录当前的状态，客户端角色
+ db 使用的数据库
+ sub/psub 订阅状态
+ multi multi缓存的数据
+ qbuf 输入缓冲区 （大小可变），保存用户的指令
+ 输出缓冲区
+
+ 最后一个命令
+
+
+ 客户端关闭
+    1.idle时间超过timeout
+    2.主动关闭
+    3.发送不能识别的命令
+    4.命令超过输入缓冲区 1G
+    5.给客户端发送的数据超过输出缓冲区
+
+
+    timeout 后会自动关闭
+
+
+缓冲区
+   硬性限制
+   软性限制
+   超时时间
+
+  如果超过硬性限制，直接关闭客户端
+  超过软性限制，会监控，持续时间超过 设置的时长，会关闭客户端连接
+
+  发布订阅
+
+
+
+
+
