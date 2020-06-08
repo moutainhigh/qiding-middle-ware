@@ -1,0 +1,14 @@
+@startuml
+object userInterface
+object application
+object domain
+object infrastructure
+
+userInterface -> application
+userInterface --> domain
+userInterface -> infrastructure
+application->infrastructure
+application -->domain
+domain -- infrastructure
+
+@enduml

@@ -1,0 +1,90 @@
+1.redis-server 结构
+ redis-server {
+     redisDB *db
+     int number
+  }
+
+ 客户端记录当前的db
+ redis-cli{
+  redisDB
+ }
+select 切换db
+
+
+键空间
+   dict 记录key和value对象
+
+   对键空间的操作
+       set key
+       del key
+
+   先通过键空间找到key，然后获取对应的数据
+
+ flushDB 清空数据库
+
+
+  键空间维护工作
+    查看命中率
+       info stats 查看属性 keyspace_hits 和 keyspace_miss
+
+    访问数据的时候，会更新lru
+
+    设置过期时间
+    expire 秒过期
+    pexpire 毫秒过期
+
+
+    -2 不存在
+    -1 没有过期时间
+    其他 剩余存储时间
+
+
+
+   四种过期方法
+
+    expire
+    pexpire
+    expireat
+    pexpireat
+
+   expire->pexpire->pexpireat <- expireat
+
+
+    pexpire(ttl){
+      n=获取当前的时间戳
+      pexpireat(n+ttl)
+    }
+
+    pexpireat(ttl){
+
+    }
+
+
+    移除过期时间的命令
+      persist  删除过期时间
+
+   过期字典
+     type redisDb{
+       dict *expires 记录的是键的过期时间
+     }
+
+
+  过期键的删除策略
+
+     定时删除
+        创建过期时间的时候 同时创建定时器，让定时器在过时的时候删除键
+
+     定期删除
+        隔一段时间就检测一遍数据库，然后删除过期的数据
+
+     惰性删除
+        不删除数据，访问的时候，判断数据是否已经过期，如果过期就删除数据
+        内存不友好
+
+
+
+
+
+
+
+
