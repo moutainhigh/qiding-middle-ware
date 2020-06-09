@@ -1,0 +1,40 @@
+1.哨兵相互发现
+      "__sentinel__:hello"
+      "127.0.0.1,26301,57744f0fbeb71f8171f618072e9ed936b421c596,4,qiding,127.0.0.1,6301,4"
+通过 PUBLISH和SUBSCRIBE
+   发送者的 ip，port，id，纪元，master，ip，port，纪元
+
+   sentinel sentinel
+
+每个sentinel都要记录其他的信息
+
+2.发送ping命令
+     down-after-milliseconds  判断是否下线
+
+     1。主观下线，单台sentinel确定下线
+
+3.客观下线
+      sentinel is-master-down-by-addr qiding m_host,m_port, 0,*
+
+     返回值：  1,*,纪元
+
+4.选举领头 sentinel，leader进行故障转移
+      sentinel is-master-down-by-addr qiding m_host,m_port, 纪元, run_id
+      1,run_id,纪元
+
+5.故障转移
+    从所有的从服务器挑选一个从服务器，并转化为主服务器
+    让所有的从服务器复制，主服务器数据
+
+   选择主服务器
+     1.优先级高的
+     2.offset大的
+     3.run_id小的
+
+   1.slave on one
+   2.然后执行info 查看是否是master
+   3.发送slaveof
+
+
+
+

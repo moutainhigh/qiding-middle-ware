@@ -1,0 +1,74 @@
+1.节点
+   开启 cluster-enabled yes 节点通过 cluster启动
+   cluster meet ip port 形成集群
+
+   每个节点都记录 群的其他节点
+      nodeState {
+        ip
+        port
+        name
+        clusterNode *
+      }
+
+  cluster meet 命令
+    A->B
+      A把B的信息，记录到node
+      B把A的信息，记录到node
+
+2.槽指派
+   整个数据库 16384个槽，只有16384都在处理，才是 ok状态
+
+    clusterNode{
+      char*  slots[16384/8]
+       int numbers
+    }
+
+   l6386/8个字符，如果处理对应槽的话，对应的值为1
+  例如 0 1 2 3 4 5 6 7  8
+      1 1 1 1 1 1 1 1  1
+
+  节点会把 自己的 slots数组，通过消息发送给其他的节点
+
+  clusterNode(A) 传递给 clusterNode（B）
+
+
+  clusterState {
+    clusterNode * slots[16384]
+  }
+
+  clusterState->查找 i 指配给某一个节点，的 复杂度是O(1)
+
+
+3.重定向 客户端重定向到 i所在的服务器
+  1.计算key所在的槽，是否是myself
+  2.返回move错误，客服端重定向到服务器
+
+
+4.计算键属于哪个槽
+   cluster keyslot "key"
+
+5. MOVED slot ip:port
+    cluster getkeysinslot slot count 返回count个属于slot的数据库键
+    clusterState {
+        zskiplist *slot_to_keys
+    }
+    跳表保存，slot和keys的关系
+
+6.重新分片
+
+7.ask 错误
+   把一个槽的所有的键（S1，S2）迁移到 B， 结果 S1 迁移成功，S2迁移失败， 会有redirect 请求
+
+ ask错误和moved的区别
+   moved是指槽的负责权，从一个节点转移到另外一个节点
+   ask 是在槽迁移的过程中，请求转发到 ask指向的节点
+
+8.把一个节点设置成某一个节点的从节点
+  CLUSTER Replicate 60eeaa3545b7c39a59cec2270cf8caa0ff17b6d3
+
+  redis-cli --cluster create 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 --cluster-replicas 1
+  群访问
+  redis-cli  -c -p 7000
+
+
+
