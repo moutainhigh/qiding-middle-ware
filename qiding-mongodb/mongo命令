@@ -1,0 +1,22 @@
+1.常用命令
+1.insert({})
+2.update({},{$set:{}})
+3.update({},{$addToSet:{}})
+4.remove({})
+
+2.查看mongodb的执行计划 explain
+  db.getCollection("numbers").find({num:{$gt:10}}).explain("executionStats")
+
+3.添加索引
+    db.numbers.createIndex({num:1})
+    db.numbers.getIndexes()
+    db.runCommand({"listIndexes":"numbers"})
+
+4.管理命令
+   db.stats()
+   db.numbers.stats()
+
+5.查看mongodb的命令，db.numbers.find. 不加括号
+
+
+
