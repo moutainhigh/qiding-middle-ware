@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+     type: restart
+  generateName: qiding-webapp-
+spec:
+   containers:
+     - image: qiding-webapp:v1.1
+       imagePullPolicy: IfNotPresent
+       name: qiding-webapp
+       ports:
+         - containerPort: 8080
+           protocol: TCP 
+       livenessProbe:
+                httpGet:
+                    path: /health
+                    port: 8080    

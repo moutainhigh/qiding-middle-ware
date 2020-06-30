@@ -52,7 +52,8 @@
 		<module>qiding-drools</module>
 		<module>qiding-push</module>
         <module>qiding-ddd</module>
-        <!--    <module>qiding-limiter</module>-->
+		<module>qiding-reactor</module>
+		<!--    <module>qiding-limiter</module>-->
 	</modules>
 
 

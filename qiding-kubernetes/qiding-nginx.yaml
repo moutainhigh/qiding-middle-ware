@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: qiding-nginx
+  namespace: default
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: qiding-nginx
+    ports:
+    - containerPort: 80
+      protocol: TCP

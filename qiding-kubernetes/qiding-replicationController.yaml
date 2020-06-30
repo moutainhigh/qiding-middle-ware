@@ -1,0 +1,33 @@
+#version
+apiVersion: v1
+#controller type
+kind: ReplicationController
+#metadata data
+metadata:
+  lables:
+     controller: replication
+  name: qiding-replication
+#spec
+spec:
+   replicas: 3  
+#selector
+   selector:
+     app: qiding-webapp     
+#template
+   template:
+#pod metadata
+     metadata:
+        generateName: qiding-webapp-  
+        labels:
+            app: qiding-webapp
+     spec:
+       nodeSeletor:
+           qiding-name: hello-world
+       containers:
+         - image: qiding-webapp:v1.1  
+           imagePullPolicy: IfNotPresent
+           name: qiding-webapp
+           ports:
+              - containerPort: 8080
+                protocol: TCP
+ 

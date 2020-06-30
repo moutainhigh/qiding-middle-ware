@@ -23,7 +23,7 @@ public class MongoConnection implements IConnection, IDBConnection {
                  .applyToClusterSettings(builder -> builder.hosts(Arrays.asList(address)))
                  .applyToClusterSettings(builder -> builder.requiredClusterType(ClusterType.REPLICA_SET).requiredReplicaSetName(setName))
                  .credential(credentials)
-                  .build());
+			     .build());
         return mongoClient;
     }
 
