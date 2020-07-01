@@ -30,7 +30,6 @@ public class ReadWatchNode implements Watcher {
 
     public static final CountDownLatch countDownLatch=new CountDownLatch(1);
 
-
     public static void main(String[] args) throws IOException, KeeperException, InterruptedException {
         ZooKeeper zooKeeper=new ZooKeeper("127.0.0.1:2181",1000,new ReadWatchNode());
         countDownLatch.await();
