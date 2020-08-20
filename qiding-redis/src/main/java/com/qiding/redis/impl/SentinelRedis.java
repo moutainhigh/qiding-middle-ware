@@ -2,6 +2,7 @@ package com.qiding.redis.impl;
 
 import com.qiding.redis.AbstractRedisService;
 import com.qiding.redis.pojo.RedisNode;
+import com.sun.deploy.util.StringUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisSentinelPool;
 import redis.clients.jedis.Protocol;
@@ -24,7 +25,12 @@ public class SentinelRedis  extends AbstractRedisService {
            synchronized (this){
                if(pool==null){
                    Set<String> sentinelSet= Arrays.asList(getRedisNodes()).parallelStream().map(redisNode -> redisNode.getHost()+":"+redisNode.getPort()).collect(Collectors.toSet());
-                    pool=new JedisSentinelPool(masterName,sentinelSet,jedisPoolConfig, Protocol.DEFAULT_TIMEOUT,getPassword());
+                   String password=getPassword();
+                   if(password==null){
+					   pool=new JedisSentinelPool(masterName,sentinelSet,jedisPoolConfig, Protocol.DEFAULT_TIMEOUT);
+				   }else {
+					   pool=new JedisSentinelPool(masterName,sentinelSet,jedisPoolConfig, Protocol.DEFAULT_TIMEOUT,getPassword());
+				   }
                }
            }
        }

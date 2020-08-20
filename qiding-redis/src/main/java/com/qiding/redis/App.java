@@ -17,27 +17,37 @@ public class App
 
 
     public static void sentinel()throws InterruptedException{
-        String masterName="email-test";
-        RedisNode[] redisNodes={new RedisNode("172.28.61.27",26379),
-                new RedisNode("172.28.61.26",26379),
-                new RedisNode("172.28.61.25",26379)};
-        IRedis redis=new SentinelRedis(masterName,redisNodes, "b840b7be6c52");
-        System.out.println(redis.getValue("temail:auth:user-temail:master@t.cm"));
+		String masterName="qiding";
+		RedisNode[] redisNodes={new RedisNode("127.0.0.1",26301),
+                new RedisNode("127.0.0.1",26302),
+                new RedisNode("127.0.0.1",26303),
+                new RedisNode("127.0.0.1",26304)};
+		IRedis redis=new SentinelRedis(masterName,redisNodes, null);
+		Boolean hello=true;
+		while (hello){
+			try {
+				// System.out.println(redis.getValue("temail:auth:user-temail:master@t.cm"));
+				redis.setValue("qiding","111111", Duration.ofSeconds(200));
+				redis=new SentinelRedis(masterName,redisNodes, null);
+				System.out.println(redis.getValue("qiding"));
+				TimeUnit.SECONDS.sleep(10);
+			}catch (Exception e){
 
-        redis.setValue("qiding","111111", Duration.ofSeconds(20));
+			}
+		}
 
-        TimeUnit.SECONDS.sleep(5);
-        redis=new SentinelRedis(masterName,redisNodes, "b840b7be6c52");
-        System.out.println(redis.getValue("qiding"));
+
+
+
 
 
         TimeUnit.SECONDS.sleep(10);
-        redis=new SentinelRedis(masterName,redisNodes, "b840b7be6c52");
+        redis=new SentinelRedis(masterName,redisNodes, null);
         System.out.println(redis.getValue("qiding"));
 
 
         TimeUnit.SECONDS.sleep(5);
-        redis=new SentinelRedis(masterName,redisNodes, "b840b7be6c52");
+        redis=new SentinelRedis(masterName,redisNodes, null);
         System.out.println(redis.getValue("qiding"));
     }
 
@@ -49,7 +59,7 @@ public class App
 //                new RedisNode("127.0.0.1",7004),
 //                new RedisNode("127.0.0.1",7005),
         };
-        IRedis redis=new ClusterRedis(redisNodes, "b840b7be6c52");
+        IRedis redis=new ClusterRedis(redisNodes, null);
 
         while(true){
             redis.setValue("B","qiding",Duration.ofSeconds(1000));

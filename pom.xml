@@ -53,7 +53,9 @@
 		<module>qiding-push</module>
         <module>qiding-ddd</module>
 		<module>qiding-reactor</module>
-		<!--    <module>qiding-limiter</module>-->
+        <module>qiding-skywalking</module>
+        <module>qiding-webdriver</module>
+        <!--    <module>qiding-limiter</module>-->
 	</modules>
 
 

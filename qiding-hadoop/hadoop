@@ -1,0 +1,55 @@
+1. File——>Block->DataNode
+2. DataNode 计算节点+存储节点
+3. 本地计算-(移动计算，代替移动数据)
+
+
+ HBASE
+      HBASEMASTER
+      hbaseregion
+      hbaseclient
+
+ hive
+     元数据存储->mysql
+     数据存储->hbase
+
+ 安全策略
+
+
+hadoop安装步骤
+   1.修改etc/hadoop/hadoop-env.sh 修改java_home
+   2.启动hdfs-site
+
+解决问题：
+   存储+分析计算
+   高可靠，高扩展，高性能，
+组成：
+   common（辅助工具）
+   hdfs（存储）
+   yarn（资源调度）
+   mapreduce（计算）
+
+
+   ResourceManger 处理客户端的请求
+
+
+
+生态体系：
+   第一层：数据来源
+          数据库，日志，视频/ppt
+   第二层：数据传输层
+       sqoop:数据库
+       flume:日志采取框架
+       kafka:
+   第三层：数据存储
+       HDFS文件存储，HBASE非关系型数据库
+   第四层：分配资源
+        YARN 资源管理（CPU，内存）
+   第五层：数据计算
+       离线计算： mapreduce（hive，mahout）
+       实时计算：storm
+   第6层：任务调度
+      定时任务
+
+
+
+
