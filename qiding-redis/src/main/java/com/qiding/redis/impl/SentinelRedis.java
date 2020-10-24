@@ -2,7 +2,6 @@ package com.qiding.redis.impl;
 
 import com.qiding.redis.AbstractRedisService;
 import com.qiding.redis.pojo.RedisNode;
-import com.sun.deploy.util.StringUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisSentinelPool;
 import redis.clients.jedis.Protocol;

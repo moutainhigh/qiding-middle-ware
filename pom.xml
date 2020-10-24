@@ -55,6 +55,10 @@
 		<module>qiding-reactor</module>
         <module>qiding-skywalking</module>
         <module>qiding-webdriver</module>
+        <module>qiding-sentinel-dashboard</module>
+        <module>qiding-multithread</module>
+        <module>qiding-quartz</module>
+        <module>qiding-python</module>
         <!--    <module>qiding-limiter</module>-->
 	</modules>
 
